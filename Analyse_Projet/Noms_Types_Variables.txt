@@ -1,1 +1,1 @@
-Couleurs: Color
+Couleurs: int Color
