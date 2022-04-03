@@ -1,5 +1,23 @@
 Couleurs: int color
 Doublons : int doublon
 Ordre de passage : int nbtour
- 
+Nom : char nom[NB]
 
+Carte Développement :(0 pas débloqué, 1 débloqué)
+	-> 1: int dev1 (0/1)
+	-> 2: int dev2 (0/1)
+	-> 3: int dev3 (0/1)
+	-> 4: int dev4 (0/1)
+
+Type de Cases :
+	int val
+	-> 0:Terre
+	-> 1:Mer
+	-> 2:Mer lointaine
+	-> 3:cache au Trésor
+	-> 4:Port
+
+Occupation de Case: int libre (0 si libre, 1 sinon)
+
+Marchandises: int slot
+Type Marchandise: int type
