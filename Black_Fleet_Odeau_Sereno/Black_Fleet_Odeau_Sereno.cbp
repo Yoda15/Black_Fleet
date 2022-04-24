@@ -31,6 +31,13 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Declarations_Variables.h" />
+		<Unit filename="Fonctions_Initialisation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Fonctions_Initialisation.h" />
+		<Unit filename="Joueur.h" />
+		<Unit filename="Objets.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

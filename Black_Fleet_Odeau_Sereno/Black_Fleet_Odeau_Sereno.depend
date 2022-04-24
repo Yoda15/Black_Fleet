@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1650832820 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Declarations_Variables.h"
+	"Objets.h"
+	"Joueur.h"
+	"Fonctions_Initialisation.h"
+
+1650828549 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
+
+1650830153 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
+	"Declarations_Variables.h"
+
+1650832013 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
+
+1650832013 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
+	<stdio.h>
+	<stdlib.h>
+	"Declarations_Variables.h"
+	"Objets.h"
+	"Joueur.h"
+	"Fonctions_Initialisation.h"
+
+1650832937 d:\github\black_fleet\black_fleet_odeau_sereno\joueur.h
+	"Objets.h"
+

@@ -21,3 +21,7 @@ Occupation de Case: int libre (0 si libre, 1 sinon)
 
 Marchandises: int slot
 Type Marchandise: int type
+
+
+Type de Bateau: 0 Marchandises, 1 Pirates, 2 Frégates
+Couleur: 0,1,2,3
