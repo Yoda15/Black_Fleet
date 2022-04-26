@@ -11,7 +11,6 @@ int main()
 {
     Joueur J[NBJ];
     SetConsoleOutputCP(1252); //permet d'afficher les accents
-    printf("Hello world!\n");
     Initialisation(J);
     return 0;
 }

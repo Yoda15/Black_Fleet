@@ -6,10 +6,10 @@
 #include "Objets.h"
 #include "Joueur.h"
 #include "Fonctions_Initialisation.h"
+#include "Affichage/Couleurs.h"
 
 
 int Choix_Couleur(int *c);
-void color(int couleurDuTexte,int couleurDeFond);
 
 
 void Initialisation(Joueur J[]){
@@ -28,11 +28,6 @@ void Initialisation(Joueur J[]){
     }
 }
 
-void color(int couleurDuTexte,int couleurDeFond) // fonction d'affichage de couleurs
-{
-        HANDLE H=GetStdHandle(STD_OUTPUT_HANDLE);
-        SetConsoleTextAttribute(H,couleurDeFond*16+couleurDuTexte);
-}
 
 int Choix_Couleur(int *c){
     /**Choix de la Couleur**/
