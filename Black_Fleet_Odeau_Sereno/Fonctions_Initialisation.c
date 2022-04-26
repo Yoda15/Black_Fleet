@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
 #include "Declarations_Variables.h"
 #include "Objets.h"
 #include "Joueur.h"
@@ -28,16 +30,18 @@ void Initialisation(Joueur J[]){
 
 int Choix_Couleur(int *c){
     /**Choix de la Couleur**/
-    int color=0;
-    while ((color<1) || (color>15)|| (c[color]==0)){
+    int colora=0;
+    while ((colora<1) || (colora>15)|| (c[colora]==0)){
         printf("\nVeuillez Choisir une couleur : ");
         printf("\n -Bleu 1\n -Vert 2\n -Cyan 3\n -Rouge 4\n -Magenta 5\n -Marron 6\n -Gris(Clair) 7\n -Gris(Foncé) 8\n -Bleu(Clair) 9\n -Vert(Clair) 10\n -Cyan(Clair) 11\n -Rouge(Clair) 12\n -Magenta(Clair) 13\n -Jaune 14\n -Noir 15\n");
         printf("\nNuméro de la Couleur: ");
-        scanf("%d", &color);
-        if (c[color]==0){
+        scanf("%d", &colora);
+        if (c[colora]==0){
+            //color(4,0);
             printf("Couleur Déjà Selectionné ! Merci d'en choisir une autre.");
+            //color(16,0);
         }
     }
-    c[color]=0;
-    return color;
+    c[colora]=0;
+    return colora;
 }
