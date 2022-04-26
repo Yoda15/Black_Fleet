@@ -9,6 +9,7 @@
 
 
 int Choix_Couleur(int *c);
+void color(int couleurDuTexte,int couleurDeFond);
 
 
 void Initialisation(Joueur J[]){
@@ -27,19 +28,24 @@ void Initialisation(Joueur J[]){
     }
 }
 
+void color(int couleurDuTexte,int couleurDeFond) // fonction d'affichage de couleurs
+{
+        HANDLE H=GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(H,couleurDeFond*16+couleurDuTexte);
+}
 
 int Choix_Couleur(int *c){
     /**Choix de la Couleur**/
     int colora=0;
-    while ((colora<1) || (colora>15)|| (c[colora]==0)){
+    while ((colora<1) || (colora>15)|| (c[colora]==0)){ //Permet de vérifier que la couleur sélectionner est compris entre 1 et 15 et qu'elle n'a pas déjà était sélectionné
         printf("\nVeuillez Choisir une couleur : ");
-        printf("\n -Bleu 1\n -Vert 2\n -Cyan 3\n -Rouge 4\n -Magenta 5\n -Marron 6\n -Gris(Clair) 7\n -Gris(Foncé) 8\n -Bleu(Clair) 9\n -Vert(Clair) 10\n -Cyan(Clair) 11\n -Rouge(Clair) 12\n -Magenta(Clair) 13\n -Jaune 14\n -Noir 15\n");
+        printf("\n -Bleu 1\n -Vert 2\n -Cyan 3\n -Rouge 4\n -Magenta 5\n -Marron 6\n -Gris(Clair) 7\n -Gris(Foncé) 8\n -Bleu(Clair) 9\n -Vert(Clair) 10\n -Cyan(Clair) 11\n -Rouge(Clair) 12\n -Magenta(Clair) 13\n -Jaune 14\n -Blanc 15\n");
         printf("\nNuméro de la Couleur: ");
         scanf("%d", &colora);
         if (c[colora]==0){
-            //color(4,0);
+            color(4,0);
             printf("Couleur Déjà Selectionné ! Merci d'en choisir une autre.");
-            //color(16,0);
+            color(15,0);
         }
     }
     c[colora]=0;

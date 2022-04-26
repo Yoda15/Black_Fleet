@@ -11,7 +11,7 @@ struct Case{
     int joueur; // 0,1,2,3 (Par ordre de passage)
 };
 
-
+typedef struct Case Case;
 
 //Définition de l'objet "Carte"
 struct Carte{
@@ -22,5 +22,6 @@ struct Carte{
     int Fin_Partie;
 };
 
+typedef struct Carte Carte;
 
 #endif // OBJETS_H_INCLUDED

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1650974842 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
+1650976842 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -10,7 +10,7 @@
 
 1650974934 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
 
-1650882016 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
+1650976019 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
 	"Declarations_Variables.h"
 
 1650882016 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
