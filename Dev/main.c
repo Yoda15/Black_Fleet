@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "objet.h"
-
+#include "Affichage.h"
 int main()
 {
     S_Case P[Larg][Long];
@@ -15,5 +15,6 @@ int main()
         }
         printf("\n");
     }
+    Affichage_Plateau(P);
     return 0;
 }
