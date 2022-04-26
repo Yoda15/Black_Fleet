@@ -34,7 +34,7 @@
 		<Unit filename="Affichage/Couleurs.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Couleurs.h" />
+		<Unit filename="Affichage/Couleurs.h" />
 		<Unit filename="Declarations_Variables.h" />
 		<Unit filename="Fonctions_Initialisation.c">
 			<Option compilerVar="CC" />
