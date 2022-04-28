@@ -10,7 +10,7 @@
 
 1651181164 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
 
-1651180947 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
+1651181852 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
 	"Declarations_Variables.h"
 
 1651180996 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
@@ -37,4 +37,12 @@
 	<windows.h>
 
 1650982868 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.h
+
+1651181493 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../Declarations_Variables.h"
+	"Couleurs.h"
+	"../Objets.h"
 
