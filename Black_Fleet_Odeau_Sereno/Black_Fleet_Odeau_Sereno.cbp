@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Affichage/Couleurs.h" />
+		<Unit filename="Affichage/Plateau.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Affichage/Plateau.h" />
 		<Unit filename="Declarations_Variables.h" />
 		<Unit filename="Fonctions_Initialisation.c">
 			<Option compilerVar="CC" />

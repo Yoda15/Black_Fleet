@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1650981122 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
+1651181284 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -8,14 +8,14 @@
 	"Joueur.h"
 	"Fonctions_Initialisation.h"
 
-1650979398 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
+1651181164 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
 
-1650976019 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
+1651180947 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
 	"Declarations_Variables.h"
 
-1650882016 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
+1651180996 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
 
-1650981477 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
+1651181178 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -24,7 +24,7 @@
 	"Objets.h"
 	"Joueur.h"
 	"Fonctions_Initialisation.h"
-	"Couleurs.h"
+	"Affichage/Couleurs.h"
 
 1650882016 d:\github\black_fleet\black_fleet_odeau_sereno\joueur.h
 	"Objets.h"
@@ -35,4 +35,6 @@
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
+
+1650982868 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.h
 

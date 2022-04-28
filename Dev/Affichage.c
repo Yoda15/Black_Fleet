@@ -10,12 +10,12 @@ S_Case P[Larg][Long];
 void Affichage_Plateau(S_Case P[][Long])
 {
     int i=0,j=0;
-    //k=0;
+    int k=0;
     for (i=0; i<Larg; i++)
     {
         for (j=0; j<Long; j++)
         {
-            //printf("|");
+            printf("|");
             switch(P[i][j].type)
             {
             case 0:
@@ -49,11 +49,11 @@ void Affichage_Plateau(S_Case P[][Long])
             color(15,0);
         }
         printf("\n");
-        //for(k=0;k<98;k++)
-       // {
-        //    printf("-");
-        //}
-        //printf("\n");
+        for(k=0;k<98;k++)
+        {
+            printf("-");
+        }
+        printf("\n");
     }
 }
 

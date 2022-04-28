@@ -5,13 +5,12 @@
 #include "Declarations_Variables.h"
 //Définition de l'objet "Case"
 struct Case{
-    int type; // 0 Terre, 1 Mer, 2 Mer lointaine, 3 cache au trésor, 4 Port
+    int type; // 0 Terre, 1 Mer, 2 Mer lointaine, 3 cache au trésor, 4 Port outils, 5 port riz, 6 port blé, 7 port érable, 8 port vin
     int etat; // 0 si libre, 1 si occupé
-    int bateau; // 0 Marchandise, 1 Pirates, 2 Frégates
-    int joueur; // 0,1,2,3 (Par ordre de passage)
+    int bateau; // 1 Marchandise, 2 Pirates, 3 Frégates, 0 initialisation
+    int joueur; // 1,2,3,4 (Par ordre de passage); 0 initialisation
 };
-
-typedef struct Case Case;
+typedef struct Case S_Case;
 
 //Définition de l'objet "Carte"
 struct Carte{

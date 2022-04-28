@@ -5,5 +5,7 @@
 #define NBJ 4
 #define BLANC 16
 #define NOIR 0
+#define Long 14
+#define Larg 12
 
 #endif // DECLARATIONS_VARIABLES_H_INCLUDED
