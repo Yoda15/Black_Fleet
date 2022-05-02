@@ -2,5 +2,7 @@
 #define MENU_H_INCLUDED
 
 int menu();
+void Regles();
+
 
 #endif // MENU_H_INCLUDED

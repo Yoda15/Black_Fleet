@@ -20,7 +20,7 @@ int main()
         printf("1");
         break;
     case 2:
-        printf("2");
+        Regles();
         break;
     case 3:
         printf("3");
