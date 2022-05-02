@@ -23,6 +23,33 @@ struct Carte{
 
 typedef struct Carte Carte;
 
+
+//Définition de l'objet Marchands
+struct Marchand{
+    int joueur; //0,1,2,3 (Par Joueur)
+    int statut; //Coulé(0) ou sur le plateau(1)
+    int marchandise; //Nombre de marchandises: 0,1,2,3
+    int type_marchandise; //Type de marchandise: 0,4,5,6,7,8
+    int coordonee[2]; //Case occupée
+};
+typedef struct Marchand Marchand;
+
+//Définition de l'objet pirates
+struct Pirates{
+    int joueur; //0,1,2,3 (Par Joueur)
+    int statut; //Coulé(0) ou sur le plateau(1)
+    int marchandise; //Nombre de marchandises: 0,1
+    int coordonee[2]; //Case occupée
+};
+typedef struct Pirates Pirates;
+
+//Définition de l'objet frégate
+struct fregate{
+    int type; //1 ou 2 pour les différencier
+    int coordonee[2]; //Case occupée
+};
+typedef struct fregate fregate;
+
 //Définition de l'objet "Joueur"
 struct Joueur{
     char nom[NBCHAR]; //Nom du joueur
@@ -30,35 +57,11 @@ struct Joueur{
     int nb; //Numéro de passage (0,1,2,3)
     int doublons; //nombre de doublons
     //struct Carte Pioche; //Carte détenu par le joueur
-    //struct Bateau Boat; //Bateau détenu par le joueur
+    Marchand M;
+    Pirates P;
 };
 typedef struct Joueur Joueur;
 
-//Définition de l'objet Marchands
-struct Marchand{
-    int joueur; //1,2,3,4 (Par ordre de passage)
-    int statut; //Coulé(0) ou sur le plateau(1)
-    int marchandise; //Nombre de marchandises: 0,1,2,3
-    int type_marchandise; //Type de marchandise: 0,4,5,6,7,8
-    S_Case  coordonee; //Case occupée
-};
-typedef struct Marchand Marchand;
-
-//Définition de l'objet pirates
-struct Pirates{
-    int joueur; //1,2,3,4 (Par ordre de passage)
-    int statut; //Coulé(0) ou sur le plateau(1)
-    int marchandise; //Nombre de marchandises: 0,1
-    S_Case  coordonee; //Case occupée
-};
-typedef struct Pirates Pirates;
-
-//Définition de l'objet frégate
-struct fregate{
-    int type; //1 ou 2 pour les différencier
-    S_Case  coordonee; //Case occupée
-};
-typedef struct fregate fregate;
 
 
 #endif // OBJETS_H_INCLUDED

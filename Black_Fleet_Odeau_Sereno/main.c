@@ -30,9 +30,9 @@ int main()
         break;
     }
 
-    /*int NBJ =4;
+    int NBJ =4;
     Joueur J[NBJ];
-    Initialisation(J, NBJ);*/
+    Initialisation(J, NBJ);
 
 
     //Test Sim

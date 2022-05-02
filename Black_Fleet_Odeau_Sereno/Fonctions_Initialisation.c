@@ -24,6 +24,17 @@ void Initialisation(Joueur J[], int NBJ){
         J[i].couleur=(Choix_Couleur(c_couleur)); //choix de la couleur
         J[i].nb=0;
         J[i].doublons=0;
+        J[i].M.joueur=i;
+        J[i].M.marchandise=0;
+        J[i].M.statut=0;
+        J[i].M.type_marchandise=0;
+        J[i].M.coordonee[0]=0;
+        J[i].M.coordonee[0]=1;
+        J[i].P.joueur=i;
+        J[i].P.marchandise=0;
+        J[i].P.statut=0;
+        J[i].P.coordonee[0]=0;
+        J[i].P.coordonee[0]=1;
     }
 }
 
