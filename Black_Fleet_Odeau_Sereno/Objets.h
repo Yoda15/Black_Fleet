@@ -33,10 +33,32 @@ struct Joueur{
     //struct Bateau Boat; //Bateau détenu par le joueur
 };
 typedef struct Joueur Joueur;
-/*
-//Définition de l'objet "Bateau"
-struct Bateau{
+
+//Définition de l'objet Marchands
+struct Marchand{
+    int joueur; //1,2,3,4 (Par ordre de passage)
+    int statut; //Coulé(0) ou sur le plateau(1)
+    int marchandise; //Nombre de marchandises: 0,1,2,3
+    int type_marchandise; //Type de marchandise: 0,4,5,6,7,8
+    S_Case  coordonee; //Case occupée
 };
-*/
+typedef struct Marchand Marchand;
+
+//Définition de l'objet pirates
+struct Pirates{
+    int joueur; //1,2,3,4 (Par ordre de passage)
+    int statut; //Coulé(0) ou sur le plateau(1)
+    int marchandise; //Nombre de marchandises: 0,1
+    S_Case  coordonee; //Case occupée
+};
+typedef struct Pirates Pirates;
+
+//Définition de l'objet frégate
+struct fregate{
+    int type; //1 ou 2 pour les différencier
+    S_Case  coordonee; //Case occupée
+};
+typedef struct fregate fregate;
+
 
 #endif // OBJETS_H_INCLUDED

@@ -13,8 +13,8 @@ int main()
 {
     //Test Matt
     SetConsoleOutputCP(1252); //permet d'afficher les accents
-    int a;
-    a=menu();
+    //int a;
+    //a=menu();
 
     /*int NBJ =4;
     Joueur J[NBJ];
