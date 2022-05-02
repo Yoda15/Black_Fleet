@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1651505155 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
+1651533338 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -10,14 +10,14 @@
 	"Affichage/Plateau.h"
 	"Menu.h"
 
-1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
+1651532258 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
 
 1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
 	"Declarations_Variables.h"
 
-1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
+1651531913 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
 
-1651505683 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
+1651532775 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>

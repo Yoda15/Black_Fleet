@@ -12,7 +12,7 @@
 int Choix_Couleur(int *c){
     /**Choix de la Couleur**/
     int colora=-1;
-    while ((colora!=0) || (colora!=6) || (colora!=7) || (colora!=8) || (colora!=11) || (colora!=13) || (colora!=15) || (c[colora]==-1)){ //Permet de vérifier que la couleur sélectionner est compris entre 1 et 15 et qu'elle n'a pas déjà était sélectionné
+    while (((colora!=0) && (colora!=6) && (colora!=7) && (colora!=8) && (colora!=11) && (colora!=13) && (colora!=15)) || (c[colora]==-1)){ //Permet de vérifier que la couleur sélectionner est compris entre 1 et 15 et qu'elle n'a pas déjà était sélectionné ou indisponible
         printf("\nVeuillez Choisir une couleur : ");
         printf("\n -Noir 0\n -Marron 6\n -Gris(Clair) 7\n -Gris(Foncé) 8\n -Cyan(Clair) 11\n -Magenta(Clair) 13\n -Blanc 15\n");
         printf("\nNuméro de la Couleur: ");
@@ -29,11 +29,11 @@ int Choix_Couleur(int *c){
 }
 
 
-void Initialisation(Joueur J[], int NBJ){
+void Initialisation(Joueur J[]){
     /**Initialisation de l'objet "Joueur"**/
     int c_couleur[16];
     int i;
-    for(i=0; i<16; i++){ //Création d'un tableau ayant les 16 valeurs de couleur
+    for(i=0; i<16; i++){ //Création d'un tableau ayant les 16 valeurs de couleur (non définie)
         c_couleur[i]=-1;
     }
     //Initialisation des couleurs disponible

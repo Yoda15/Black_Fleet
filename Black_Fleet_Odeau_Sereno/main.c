@@ -14,12 +14,14 @@ int main()
     //Test Matt
     SetConsoleOutputCP(1252); //permet d'afficher les accents
     int a;
-    a=menu();
-    int NBJ =4;
     Joueur J[NBJ];
+    S_Case P[Larg][Long];
+    do{
+      a=menu();
     switch (a){
     case 1:
-        Initialisation(J, NBJ);
+        Initialisation(J);
+        initialiser_Plateau(P);
         break;
     case 2:
         Regles();
@@ -31,6 +33,7 @@ int main()
         printf("default");
         break;
     }
+    }while(a!=1);
 
 
     //Test Sim

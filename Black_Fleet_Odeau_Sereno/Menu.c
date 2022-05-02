@@ -10,6 +10,13 @@
 #include "Menu.h"
 #include "Affichage/Couleurs.h"
 
+void boucle(){
+    int i=0;
+    while (i==0){
+        i=kbhit ();
+    }
+}
+
 
 int menu(){
     int i;
@@ -40,7 +47,8 @@ int menu(){
 
 void Regles()
 {
-    printf("BUT DU JEU : ");
+    system("cls");
+    printf("BUT DU JEU : \n");
     printf("déverrouiller 4 cartes développement puis une carte victoire pour gagner la partie.\n");
     printf("Chaque carte développement coute un certain nombre de doublons (5, 8, 11, 14) et la carte victoire coute 10 doublons.\n");
     printf("En cas d’égalité (si 2 joueurs débloquent la carte victoire sur le même tour),\n");
@@ -48,7 +56,7 @@ void Regles()
     printf("Pour gagner des doublons il y a trois possibilités :\n");
     printf("vendre des marchandises récupérés dans un port avec un navire marchand,\n");
     printf("voler puis enterrer une marchandise avec un pirate (2 doublons puis 5 doublons),\n");
-    printf("ou utiliser une frégate pour couler un pirate (2 doublons).\n");
+    printf("ou utiliser une frégate pour couler un pirate (2 doublons).\n\n");
     printf("A chaque tour un joueur va :\n");
     printf("Déplacer son marchand.\n");
     printf("S’il arrive sur un port, il va vendre ses marchandises pour 3 doublons et en reprendre automatiquement 3, et peut continuer a bouger s’il lui reste des mouvements.\n");
@@ -62,6 +70,8 @@ void Regles()
     printf("Déplacer la frégate concernée par sa carte.\n");
     printf("La frégate peut attaquer UN pirate situé sur une case adjacente pour gagner 2 doublons.\n");
     printf("Si le pirate a une marchandise, elle est remise dans le stock.\n");
-    printf("Petite spécificité : un joueur ne peux déverrouiller qu’une carte développement par tour.\n");
+    printf("Petite spécificité : un joueur ne peux déverrouiller qu’une carte développement par tour.\n\n");
     printf("Bonne partie !\n");
+    printf("\nAppuyer sur une touche pour revenir au Menu Principal...");
+    boucle();
 }
