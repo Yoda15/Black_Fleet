@@ -25,12 +25,13 @@ int menu(){
     printf("|--------------------------------------------------------------------------------------------------------|\n");
     printf("                                                                                                          \n");
     printf("Choisisez une option : ");
-    scanf("%d", i);
-    if ((i<1) && (i>3)){
+    scanf("%d",&i);
+    if ((i<1) || (i>3)){
         color(4,0);
         printf("\nMerci de Choisir une option entre 1 et 3 !!!");
         color(15,0);
+        sleep(2);
     }
-    }while((i<1) && (i>3));
+    }while((i<1) || (i>3));
     return i;
 }
