@@ -8,16 +8,42 @@
 #include "Affichage/Couleurs.h"
 
 
-int Choix_Couleur(int *c);
-void initialiser_Plateau(S_Case P[][Long]);
+
+int Choix_Couleur(int *c){
+    /**Choix de la Couleur**/
+    int colora=-1;
+    while ((colora!=0) || (colora!=6) || (colora!=7) || (colora!=8) || (colora!=11) || (colora!=13) || (colora!=15) || (c[colora]==-1)){ //Permet de vérifier que la couleur sélectionner est compris entre 1 et 15 et qu'elle n'a pas déjà était sélectionné
+        printf("\nVeuillez Choisir une couleur : ");
+        printf("\n -Noir 0\n -Marron 6\n -Gris(Clair) 7\n -Gris(Foncé) 8\n -Cyan(Clair) 11\n -Magenta(Clair) 13\n -Blanc 15\n");
+        printf("\nNuméro de la Couleur: ");
+        scanf("%d", &colora);
+        if (c[colora]==-1){
+            color(4,0);
+            printf("Couleur Déjà Selectionné ! Merci d'en choisir une autre.");
+            color(15,0);
+        }
+        printf("%d", colora);
+    }
+    c[colora]=-1;
+    return colora;
+}
+
 
 void Initialisation(Joueur J[], int NBJ){
     /**Initialisation de l'objet "Joueur"**/
     int c_couleur[16];
     int i;
     for(i=0; i<16; i++){ //Création d'un tableau ayant les 16 valeurs de couleur
-        c_couleur[i]=i;
+        c_couleur[i]=-1;
     }
+    //Initialisation des couleurs disponible
+    c_couleur[0]=0;
+    c_couleur[6]=6;
+    c_couleur[7]=7;
+    c_couleur[8]=8;
+    c_couleur[11]=11;
+    c_couleur[13]=13;
+    c_couleur[15]=15;
     for(i=0; i<NBJ; i++){ //Boucle permettant de compléter la structure de chaque joueur
         printf("\nVeuillez Rentrer le nom du joueur n°%d: ", i+1);
         scanf("%s", J[i].nom); //choix du nom
@@ -28,36 +54,15 @@ void Initialisation(Joueur J[], int NBJ){
         J[i].M.marchandise=0;
         J[i].M.statut=0;
         J[i].M.type_marchandise=0;
-        J[i].M.coordonee[0]=0;
-        J[i].M.coordonee[0]=1;
+        J[i].M.coordonee[0]=20;
+        J[i].M.coordonee[1]=20;
         J[i].P.joueur=i;
         J[i].P.marchandise=0;
         J[i].P.statut=0;
-        J[i].P.coordonee[0]=0;
-        J[i].P.coordonee[0]=1;
+        J[i].P.coordonee[0]=20;
+        J[i].P.coordonee[1]=20;
     }
 }
-
-
-int Choix_Couleur(int *c){
-    /**Choix de la Couleur**/
-    int colora=0;
-    while ((colora<1) || (colora>15)|| (c[colora]==0)){ //Permet de vérifier que la couleur sélectionner est compris entre 1 et 15 et qu'elle n'a pas déjà était sélectionné
-        printf("\nVeuillez Choisir une couleur : ");
-        printf("\n -Bleu 1\n -Vert 2\n -Cyan 3\n -Rouge 4\n -Magenta 5\n -Marron 6\n -Gris(Clair) 7\n -Gris(Foncé) 8\n -Bleu(Clair) 9\n -Vert(Clair) 10\n -Cyan(Clair) 11\n -Rouge(Clair) 12\n -Magenta(Clair) 13\n -Jaune 14\n -Blanc 15\n");
-        printf("\nNuméro de la Couleur: ");
-        scanf("%d", &colora);
-        if (c[colora]==0){
-            color(4,0);
-            printf("Couleur Déjà Selectionné ! Merci d'en choisir une autre.");
-            color(15,0);
-        }
-    }
-    c[colora]=0;
-    return colora;
-}
-
-
 
 
 S_Case P[Larg][Long];

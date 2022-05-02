@@ -15,9 +15,11 @@ int main()
     SetConsoleOutputCP(1252); //permet d'afficher les accents
     int a;
     a=menu();
+    int NBJ =4;
+    Joueur J[NBJ];
     switch (a){
     case 1:
-        printf("1");
+        Initialisation(J, NBJ);
         break;
     case 2:
         Regles();
@@ -29,10 +31,6 @@ int main()
         printf("default");
         break;
     }
-
-    int NBJ =4;
-    Joueur J[NBJ];
-    Initialisation(J, NBJ);
 
 
     //Test Sim

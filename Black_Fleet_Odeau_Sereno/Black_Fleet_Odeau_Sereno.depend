@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1651499661 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
+1651505155 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -10,14 +10,14 @@
 	"Affichage/Plateau.h"
 	"Menu.h"
 
-1651498928 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
+1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
 
-1651501267 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
+1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
 	"Declarations_Variables.h"
 
-1651498928 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
+1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
 
-1651498928 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
+1651505683 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -32,14 +32,14 @@
 
 1650981497 d:\github\black_fleet\black_fleet_odeau_sereno\couleurs.h
 
-1651498928 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.c
+1651504998 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 
-1651498928 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.h
+1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.h
 
-1651498928 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.c
+1651504998 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -47,11 +47,11 @@
 	"Couleurs.h"
 	"../Objets.h"
 
-1651498928 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.h
+1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.h
 
-1651498928 d:\github\black_fleet\black_fleet_odeau_sereno\menu.h
+1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\menu.h
 
-1651499978 source:d:\github\black_fleet\black_fleet_odeau_sereno\menu.c
+1651504998 source:d:\github\black_fleet\black_fleet_odeau_sereno\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
