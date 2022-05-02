@@ -4,7 +4,6 @@
 #include <conio.h>
 #include "Declarations_Variables.h"
 #include "Objets.h"
-#include "Joueur.h"
 #include "Fonctions_Initialisation.h"
 #include "Affichage/Couleurs.h"
 
@@ -12,7 +11,7 @@
 int Choix_Couleur(int *c);
 void initialiser_Plateau(S_Case P[][Long]);
 
-void Initialisation(Joueur J[]){
+void Initialisation(Joueur J[], int NBJ){
     /**Initialisation de l'objet "Joueur"**/
     int c_couleur[16];
     int i;

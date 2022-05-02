@@ -2,7 +2,6 @@
 #define DECLARATIONS_VARIABLES_H_INCLUDED
 
 #define NBCHAR 25
-#define NBJ 4
 #define BLANC 16
 #define NOIR 0
 #define Long 14

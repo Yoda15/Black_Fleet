@@ -1,22 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include <conio.h>
 
 #include "Declarations_Variables.h"
 #include "Objets.h"
-#include "Joueur.h"
 #include "Fonctions_Initialisation.h"
 #include "Affichage/Plateau.h"
+#include "Menu.h"
 
 int main()
 {
     //Test Matt
-    /*Joueur J[NBJ];
     SetConsoleOutputCP(1252); //permet d'afficher les accents
-    Initialisation(J);*/
+    int a;
+    a=menu();
+
+    /*int NBJ =4;
+    Joueur J[NBJ];
+    Initialisation(J, NBJ);*/
 
 
     //Test Sim
+    /*
     S_Case P[Larg][Long];
     int i=0,j=0;
     initialiser_Plateau(P);
@@ -30,4 +36,5 @@ int main()
     }
     Affichage_Plateau(P);
     return 0;
+    */
 }
