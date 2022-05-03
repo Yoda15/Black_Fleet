@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1651605240 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
+1651618381 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -11,14 +11,14 @@
 	"Menu.h"
 	"Module_Jeux/Cartes.h"
 
-1651532258 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
+1651615739 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
 
-1651602722 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
+1651615507 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
 	"Declarations_Variables.h"
 
 1651531913 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
 
-1651603626 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
+1651616990 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -123,12 +123,13 @@
 	"Menu.h"
 	"Affichage/Couleurs.h"
 
-1651608839 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.c
+1651617733 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	<conio.h>
 	"../Objets.h"
+	"../Affichage/Couleurs.h"
 
 1651603824 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
 

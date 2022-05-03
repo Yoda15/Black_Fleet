@@ -12,9 +12,9 @@
 int Choix_Couleur(int *c){
     /**Choix de la Couleur**/
     int colora=-1;
-    while (((colora!=0) && (colora!=6) && (colora!=7) && (colora!=8) && (colora!=11) && (colora!=13) && (colora!=15)) || (c[colora]==-1)){ //Permet de vérifier que la couleur sélectionner est compris entre 1 et 15 et qu'elle n'a pas déjà était sélectionné ou indisponible
+    while (((colora!=0) && (colora!=1) && (colora!=2) && (colora!=3) && (colora!=4) && (colora!=5) && (colora!=6)) || (c[colora]==-1)){ //Permet de vérifier que la couleur sélectionner est compris entre 1 et 15 et qu'elle n'a pas déjà était sélectionné ou indisponible
         printf("\nVeuillez Choisir une couleur : ");
-        printf("\n -Noir 0\n -Marron 6\n -Gris(Clair) 7\n -Gris(Foncé) 8\n -Cyan(Clair) 11\n -Magenta(Clair) 13\n -Blanc 15\n");
+        printf("\n -Noir 0\n -Marron 1\n -Gris(Clair) 2\n -Gris(Foncé) 3\n -Cyan(Clair) 4\n -Magenta(Clair) 5\n -Blanc 6\n");
         printf("\nNuméro de la Couleur: ");
         scanf("%d", &colora);
         if (c[colora]==-1){
@@ -22,7 +22,6 @@ int Choix_Couleur(int *c){
             printf("Couleur Déjà Selectionné ! Merci d'en choisir une autre.");
             color(15,0);
         }
-        printf("%d", colora);
     }
     c[colora]=-1;
     return colora;
@@ -31,20 +30,23 @@ int Choix_Couleur(int *c){
 
 void Initialisation(Joueur J[]){
     /**Initialisation de l'objet "Joueur"**/
-    int c_couleur[16];
-    int i;
-    for(i=0; i<16; i++){ //Création d'un tableau ayant les 16 valeurs de couleur (non définie)
-        c_couleur[i]=-1;
-    }
+    int c_couleur[7];
+    int i,j;
     //Initialisation des couleurs disponible
     c_couleur[0]=0;
-    c_couleur[6]=6;
-    c_couleur[7]=7;
-    c_couleur[8]=8;
-    c_couleur[11]=11;
-    c_couleur[13]=13;
-    c_couleur[15]=15;
+    c_couleur[1]=6;
+    c_couleur[2]=7;
+    c_couleur[3]=8;
+    c_couleur[4]=11;
+    c_couleur[5]=13;
+    c_couleur[6]=15;
     for(i=0; i<NBJ; i++){ //Boucle permettant de compléter la structure de chaque joueur
+        system("cls");
+        printf("|--------------------------------------------------------------------------------------------------------|\n");
+        printf("|                                                                                                        |\n");
+        printf("|-----------------------------------------------Black Fleet----------------------------------------------|\n");
+        printf("|                                                                                                        |\n");
+        printf("|--------------------------------------------------------------------------------------------------------|\n");
         printf("\nVeuillez Rentrer le nom du joueur n°%d: ", i+1);
         scanf("%s", J[i].nom); //choix du nom
         //Initialisation de toutes les données des joueurs
@@ -57,10 +59,9 @@ void Initialisation(Joueur J[]){
         J[i].P.joueur=i;
         J[i].P.marchandise=0;
         J[i].P.statut=0;
-        J[i].Pioche.dev1=0;
-        J[i].Pioche.dev2=0;
-        J[i].Pioche.dev3=0;
-        J[i].Pioche.dev4=0;
+        for(j=0; j<NBC; j++){
+            J[i].Pioche.dev[j]=0;
+        }
         J[i].Pioche.Fin_Partie=0;
     }
 }

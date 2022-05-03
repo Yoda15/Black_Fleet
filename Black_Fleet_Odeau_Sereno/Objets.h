@@ -14,10 +14,7 @@ typedef struct Case S_Case;
 
 //Définition de l'objet "Carte"
 struct Carte{
-    int dev1; // 1 si débloqué, 0 au contraire
-    int dev2;
-    int dev3;
-    int dev4;
+    int dev[4]; // 1 si débloqué, 0 au contraire
     int Fin_Partie;
 };
 

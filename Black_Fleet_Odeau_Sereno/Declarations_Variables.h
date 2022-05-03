@@ -4,6 +4,7 @@
 #define NBCHAR 25
 #define BLANC 16
 #define NBJ 4
+#define NBC 4
 #define NOIR 0
 #define Long 14
 #define Larg 12

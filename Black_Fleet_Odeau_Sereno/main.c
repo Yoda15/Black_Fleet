@@ -21,8 +21,8 @@ int main()
       a=menu();
     switch (a){
     case 1:
-        //Initialisation(J);
-        //initialiser_Plateau(P);
+        Initialisation(J);
+        initialiser_Plateau(P);
         Achat_Carte(J[0]);
         while(J[0].Pioche.Fin_Partie==0 && J[1].Pioche.Fin_Partie==0 && J[2].Pioche.Fin_Partie==0 && J[3].Pioche.Fin_Partie==0){
             J[0].Pioche.Fin_Partie=1;
