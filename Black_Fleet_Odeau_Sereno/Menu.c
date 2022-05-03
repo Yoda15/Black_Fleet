@@ -10,10 +10,10 @@
 #include "Menu.h"
 #include "Affichage/Couleurs.h"
 
-void boucle(){
+void boucle_verif(){
     int i=0;
-    while (i==0){
-        i=kbhit ();
+    while (i!=13){
+        i=getch();
     }
 }
 
@@ -72,6 +72,6 @@ void Regles()
     printf("Si le pirate a une marchandise, elle est remise dans le stock.\n");
     printf("Petite spécificité : un joueur ne peux déverrouiller qu’une carte développement par tour.\n\n");
     printf("Bonne partie !\n");
-    printf("\nAppuyer sur une touche pour revenir au Menu Principal...");
-    boucle();
+    printf("\nAppuyer sur ESPACE pour revenir au Menu Principal...");
+    boucle_verif();
 }
