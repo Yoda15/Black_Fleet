@@ -47,20 +47,21 @@ void Initialisation(Joueur J[]){
     for(i=0; i<NBJ; i++){ //Boucle permettant de compléter la structure de chaque joueur
         printf("\nVeuillez Rentrer le nom du joueur n°%d: ", i+1);
         scanf("%s", J[i].nom); //choix du nom
+        //Initialisation de toutes les données des joueurs
         J[i].couleur=(Choix_Couleur(c_couleur)); //choix de la couleur
         J[i].nb=0;
         J[i].doublons=0;
         J[i].M.joueur=i;
         J[i].M.marchandise=0;
         J[i].M.statut=0;
-        J[i].M.type_marchandise=0;
-        J[i].M.coordonee[0]=20;
-        J[i].M.coordonee[1]=20;
         J[i].P.joueur=i;
         J[i].P.marchandise=0;
         J[i].P.statut=0;
-        J[i].P.coordonee[0]=20;
-        J[i].P.coordonee[1]=20;
+        J[i].Pioche.dev1=0;
+        J[i].Pioche.dev2=0;
+        J[i].Pioche.dev3=0;
+        J[i].Pioche.dev4=0;
+        J[i].Pioche.Fin_Partie=0;
     }
 }
 

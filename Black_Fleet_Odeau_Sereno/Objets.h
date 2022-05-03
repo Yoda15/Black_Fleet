@@ -56,7 +56,7 @@ struct Joueur{
     int couleur; //Couleur (choix parmis les 16)
     int nb; //Numéro de passage (0,1,2,3)
     int doublons; //nombre de doublons
-    //struct Carte Pioche; //Carte détenu par le joueur
+    Carte Pioche; //Carte détenu par le joueur
     Marchand M;
     Pirates P;
 };
