@@ -13,6 +13,7 @@
 int main()
 {
     //Test Matt
+    /*
     SetConsoleOutputCP(1252); //permet d'afficher les accents
     int a;
     Joueur J[NBJ];
@@ -40,6 +41,7 @@ int main()
         break;
     }
     }while(a!=1);
+    */
 
 
     //Test Sim
