@@ -48,6 +48,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Menu.h" />
+		<Unit filename="Module_Jeux/Cartes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Module_Jeux/Cartes.h" />
 		<Unit filename="Objets.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />

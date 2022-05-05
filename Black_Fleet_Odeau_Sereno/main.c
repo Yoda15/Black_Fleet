@@ -8,16 +8,27 @@
 #include "Fonctions_Initialisation.h"
 #include "Affichage/Plateau.h"
 #include "Menu.h"
+#include "Module_Jeux/Cartes.h"
 
 int main()
 {
     //Test Matt
+    /*
     SetConsoleOutputCP(1252); //permet d'afficher les accents
     int a;
-    a=menu();
+    Joueur J[NBJ];
+    S_Case P[Larg][Long];
+    do{
+      a=menu();
     switch (a){
     case 1:
-        printf("1");
+        Initialisation(J);
+        initialiser_Plateau(P);
+        Achat_Carte(J[0]);
+        while(J[0].Pioche.Fin_Partie==0 && J[1].Pioche.Fin_Partie==0 && J[2].Pioche.Fin_Partie==0 && J[3].Pioche.Fin_Partie==0){
+            J[0].Pioche.Fin_Partie=1;
+            printf("yes");
+        }
         break;
     case 2:
         Regles();
@@ -29,10 +40,8 @@ int main()
         printf("default");
         break;
     }
-
-    int NBJ =4;
-    Joueur J[NBJ];
-    Initialisation(J, NBJ);
+    }while(a!=1);
+    */
 
 
     //Test Sim

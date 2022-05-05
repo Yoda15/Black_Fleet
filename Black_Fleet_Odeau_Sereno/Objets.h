@@ -14,10 +14,7 @@ typedef struct Case S_Case;
 
 //Définition de l'objet "Carte"
 struct Carte{
-    int dev1; // 1 si débloqué, 0 au contraire
-    int dev2;
-    int dev3;
-    int dev4;
+    int dev[4]; // 1 si débloqué, 0 au contraire
     int Fin_Partie;
 };
 
@@ -56,7 +53,7 @@ struct Joueur{
     int couleur; //Couleur (choix parmis les 16)
     int nb; //Numéro de passage (0,1,2,3)
     int doublons; //nombre de doublons
-    //struct Carte Pioche; //Carte détenu par le joueur
+    Carte Pioche; //Carte détenu par le joueur
     Marchand M;
     Pirates P;
 };
