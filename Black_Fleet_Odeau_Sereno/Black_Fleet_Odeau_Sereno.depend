@@ -77,14 +77,14 @@
 	"Couleurs.h"
 	"../Objets.h"
 
-1651496301 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
+1651768553 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
 
 1650989870 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.h
 
-1651501466 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\objets.h
+1651768553 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\objets.h
 	"Declarations_Variables.h"
 
-1651501466 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
+1651768553 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -94,9 +94,9 @@
 	"Fonctions_Initialisation.h"
 	"Affichage/Couleurs.h"
 
-1651496301 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
+1651768553 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
 
-1651501466 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\main.c
+1651768553 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -106,12 +106,13 @@
 	"Fonctions_Initialisation.h"
 	"Affichage/Plateau.h"
 	"Menu.h"
+	"Module_Jeux/Cartes.h"
 
 1651496301 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.h
 
 1651502411 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\menu.h
 
-1651502882 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\menu.c
+1651768553 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -132,4 +133,14 @@
 	"../Affichage/Couleurs.h"
 
 1651603824 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
+
+1651768553 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
+
+1651768553 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"../Objets.h"
+	"../Affichage/Couleurs.h"
 
