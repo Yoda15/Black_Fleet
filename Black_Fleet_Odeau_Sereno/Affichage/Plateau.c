@@ -2,17 +2,19 @@
 #include <stdlib.h>
 #include <windows.h>
 #include "../Declarations_Variables.h"
-#include "Couleurs.h"
 #include "../Objets.h"
+#include "Couleurs.h"
 
 
-void Affichage_Plateau(S_Case P[][Long]);
+
+void Affichage_Plateau(S_Case P[][Long],Joueur J[]);
+void Affichage_Bateau(S_Case P[][Long],int i,int j,Joueur J[],int c);
+
 
 S_Case P[Larg][Long];
-void Affichage_Plateau(S_Case P[][Long])
+void Affichage_Plateau(S_Case P[][Long],Joueur J[])
 {
-    int i=0,j=0;
-    int k=0;
+    int i=0,j=0,k=0,c=0;
     for (i=0; i<Larg; i++)
     {
         for (j=0; j<Long; j++)
@@ -24,38 +26,67 @@ void Affichage_Plateau(S_Case P[][Long])
                 color(2,2);
                 break;
             case 2:
-                color(1,1);
+                c=1;
                 break;
             case 3:
-                color(14,14);
+                c=14;
                 break;
             case 4:
-                color(3,3);
+                c=3;
                 break;
             case 5:
-                color(10,10);
+                c=10;
                 break;
             case 6:
-                color(12,12);
+                c=12;
                 break;
             case 7:
-                color(5,5);
+                c=5;
                 break;
             case 8:
-                color(4,4);
+                c=4;
                 break;
-            default:color(9,9);
+            default:
+                c=9;
 
             }
-            printf("%6d",P[i][j].type);
+            printf("%10d",P[i][j].type);
             color(15,0);
         }
         printf("\n");
-        for(k=0;k<98;k++)
+        for(k=0;k<((10*Long)+Long);k++)
         {
             printf("-");
         }
         printf("\n");
     }
 }
+
+void Affichage_Bateau(S_Case P[][Long],int i,int j,Joueur J[],int c)
+{
+    char t[2];
+    if(P[i][j].etat==0)
+    {
+
+    }
+    else
+    {
+        switch(P[i][j].bateau)
+        {
+        case 0:
+            color(J[(P[i][j].joueur)].couleur,c);
+            nom_couleur(J[(P[i][j].joueur)],t);
+            printf(" Mar-%d-%s ",J[(P[i][j].joueur)].M.marchandise,t);
+            break;
+        case 1:
+
+            break;
+        case 2:
+
+            break;
+        }
+    }
+}
+
+
 

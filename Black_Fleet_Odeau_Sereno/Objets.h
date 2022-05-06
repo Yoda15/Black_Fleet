@@ -7,8 +7,8 @@
 struct Case{
     int type; // 0 Terre, 1 Mer, 2 Mer lointaine, 3 cache au trésor, 4 Port outils, 5 port riz, 6 port blé, 7 port érable, 8 port vin
     int etat; // 0 si libre, 1 si occupé
-    int bateau; // 1 Marchandise, 2 Pirates, 3 Frégates, 0 initialisation
-    int joueur; // 1,2,3,4 (Par ordre de passage); 0 initialisation
+    int bateau; // 0 Marchandise, 1 Pirates, 2 Frégates,
+    int joueur; // 0,1,2,3 (Par ordre de passage);
 };
 typedef struct Case S_Case;
 
@@ -26,7 +26,7 @@ struct Marchand{
     int joueur; //0,1,2,3 (Par Joueur)
     int statut; //Coulé(0) ou sur le plateau(1)
     int marchandise; //Nombre de marchandises: 0,1,2,3
-    int type_marchandise; //Type de marchandise: 0,4,5,6,7,8
+    int type_marchandise; //Type de marchandise: 4,5,6,7,8
     int coordonee[2]; //Case occupée
 };
 typedef struct Marchand Marchand;

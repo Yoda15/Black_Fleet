@@ -10,14 +10,17 @@
 #include "Menu.h"
 #include "Module_Jeux/Cartes.h"
 
+
 int main()
 {
-    //Test Matt
-    /*
     SetConsoleOutputCP(1252); //permet d'afficher les accents
-    int a;
+    HWND hwnd=GetForegroundWindow(); //Affichange
+    ShowWindow(hwnd,SW_MAXIMIZE);    //En plein écran
     Joueur J[NBJ];
     S_Case P[Larg][Long];
+    //Test Matt
+    /*
+    int a;
     do{
       a=menu();
     switch (a){
@@ -45,8 +48,6 @@ int main()
 
 
     //Test Sim
-    /*
-    S_Case P[Larg][Long];
     int i=0,j=0;
     initialiser_Plateau(P);
      for (i=0;i<Larg;i++)
@@ -59,5 +60,5 @@ int main()
     }
     Affichage_Plateau(P);
     return 0;
-    */
+
 }
