@@ -6,7 +6,7 @@
 #include "../Objets.h"
 #include "../Affichage/Couleurs.h"
 
-void Achat_Carte(Joueur J){
+void Achat_Carte(Joueur *J){
     char choix[1];
     int i=0;
     int C;
@@ -18,8 +18,8 @@ void Achat_Carte(Joueur J){
         printf("|                                             Black Fleet/Market                                         |\n");
         printf("|--------------------------------------------------------------------------------------------------------|\n\n");
         printf("    Joueur : ");
-        color(J.couleur,2);
-        printf("%s\n", J.nom);
+        color((*J).couleur,2);
+        printf("%s\n", (*J).nom);
         color(15,0);
         printf("Souhaitez-Vous acheter une carte de développement/Fin de Partie ? (O/N) : ");
         scanf("%s", choix);
@@ -43,31 +43,32 @@ void Achat_Carte(Joueur J){
                 Sleep(1000);
                 i=1;
             }
-            else if(C==5 && (J.Pioche.dev[0]==0 || J.Pioche.dev[1]==0 || J.Pioche.dev[2]==0 || J.Pioche.dev[3]==0)){
+            else if(C==5 && ((*J).Pioche.dev[0]==0 || (*J).Pioche.dev[1]==0 || (*J).Pioche.dev[2]==0 || (*J).Pioche.dev[3]==0)){
                 color(4,0);
                 printf("Merci d'acheter toutes les autres cartes avant !");
                 color(15,0);
                 Sleep(1000);
             }
-            else if(J.doublons>=Prix[C]){
+            else if((*J).doublons>=Prix[C]){
                 i=1;
                 if(C==5){
-                    J.Pioche.Fin_Partie=1;
+                    (*J).Pioche.Fin_Partie=1;
                 }
-                else J.Pioche.dev[C-1]=1;
+                else (*J).Pioche.dev[C-1]=1;
                 color(4,0);
                 printf("\nAchat Effectué !");
                 color(15,0);
-                J.doublons=J.doublons-Prix[C];
+                (*J).Pioche.dev[C-1]=1;
+                (*J).doublons=(*J).doublons-Prix[C];
                 Sleep(2000);
             }
-            else if(J.Pioche.dev[C-1]==1){
+            else if((*J).Pioche.dev[C-1]==1){
                 color(4,0);
                 printf("\nCarte Déjà Acheté...");
                 color(15,0);
                 Sleep(500);
             }
-            else if(J.doublons<Prix[C]){
+            else if((*J).doublons<Prix[C]){
                 color(4,0);
                 printf("\nArgent Insuffisant...");
                 color(15,0);
@@ -78,3 +79,11 @@ void Achat_Carte(Joueur J){
     }
     system("cls");
 }
+
+
+
+/*
+void Carte_Aléatoire(int tab[]){
+    printf("ok");
+}
+*/

@@ -52,6 +52,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Module_Jeux/Cartes.h" />
+		<Unit filename="Module_Jeux/Déplacements.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Module_Jeux/Déplacements.h" />
 		<Unit filename="Objets.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
