@@ -30,18 +30,19 @@ int menu(){
     printf("|                                               1-> Jouer                                                |\n");
     printf("|                                               2-> Règles                                               |\n");
     printf("|                                               3-> Crédits                                              |\n");
+    printf("|                                               4-> Quitter                                              |\n");
     printf("|--------------------------------------------------------------------------------------------------------|\n");
     printf("                                                                                                          \n");
     printf("Choisisez une option : ");
     scanf("%d",&i);
-    if ((i<1) || (i>3)){
+    if ((i<1) || (i>4)){
         color(4,0);
-        printf("\nMerci de Choisir une option entre 1 et 3 !!!");
+        printf("\nMerci de Choisir une option entre 1 et 4 !!!");
         color(15,0);
         Sleep(2000);
     }
 
-    }while((i<1) || (i>3));
+    }while((i<1) || (i>4));
     return i;
 }
 

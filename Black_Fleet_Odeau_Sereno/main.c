@@ -14,12 +14,11 @@
 int main()
 {
     SetConsoleOutputCP(1252); //permet d'afficher les accents
-    HWND hwnd=GetForegroundWindow(); //Affichange
+    HWND hwnd=GetForegroundWindow(); //Affichage
     ShowWindow(hwnd,SW_MAXIMIZE);    //En plein écran
     Joueur J[NBJ];
     S_Case P[Larg][Long];
     //Test Matt
-    /*
     int a;
     do{
       a=menu();
@@ -27,8 +26,10 @@ int main()
     case 1:
         Initialisation(J);
         initialiser_Plateau(P);
-        Achat_Carte(J[0]);
         while(J[0].Pioche.Fin_Partie==0 && J[1].Pioche.Fin_Partie==0 && J[2].Pioche.Fin_Partie==0 && J[3].Pioche.Fin_Partie==0){
+            //J[0].doublons=12;
+            //Achat_Carte(&J[0]);
+            //printf("\n%d", J[0].Pioche.dev[0]);
             J[0].Pioche.Fin_Partie=1;
             printf("yes");
         }
@@ -39,15 +40,15 @@ int main()
     case 3:
         printf("3");
         break;
-    default:
-        printf("default");
+    case 4:
+        printf("Fermeture...");
         break;
     }
-    }while(a!=1);
-    */
+    }while((a!=1) && (a!=4));
 
 
     //Test Sim
+    /*
     int i=0,j=0;
     initialiser_Plateau(P);
      for (i=0;i<Larg;i++)
@@ -60,5 +61,6 @@ int main()
     }
     Affichage_Plateau(P);
     return 0;
+    */
 
 }

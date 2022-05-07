@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1651618381 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
+1651930371 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -13,7 +13,7 @@
 
 1651615739 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
 
-1651615507 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
+1651870809 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
 	"Declarations_Variables.h"
 
 1651531913 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
@@ -33,26 +33,27 @@
 
 1650981497 d:\github\black_fleet\black_fleet_odeau_sereno\couleurs.h
 
-1651504998 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.c
+1651870809 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
+	"../Objets.h"
 
-1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.h
+1651870809 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.h
 
-1651504998 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.c
+1651870809 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	"../Declarations_Variables.h"
-	"Couleurs.h"
 	"../Objets.h"
+	"Couleurs.h"
 
-1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.h
+1651870809 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.h
 
 1651504998 d:\github\black_fleet\black_fleet_odeau_sereno\menu.h
 
-1651601180 source:d:\github\black_fleet\black_fleet_odeau_sereno\menu.c
+1651926163 source:d:\github\black_fleet\black_fleet_odeau_sereno\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -133,7 +134,7 @@
 	"../Objets.h"
 	"../Affichage/Couleurs.h"
 
-1651603824 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
+1651930439 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
 
 1651768553 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
 
@@ -144,4 +145,6 @@
 	<conio.h>
 	"../Objets.h"
 	"../Affichage/Couleurs.h"
+
+1651926521 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.c
 
