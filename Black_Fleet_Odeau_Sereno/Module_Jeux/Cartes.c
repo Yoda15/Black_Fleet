@@ -92,16 +92,20 @@ void Cartes_Aleatoire(int tab[]){
     printf("\nTirage des Cartes... Merci de Patienter...");
     color(15,0);
     int tab1[CARTES+1], tab2[CARTES+1];
-    int c1=15,c2=15,k,i;
+    int k,i;
+    int couleur[2];
+    couleur[0]=5;
+    couleur[1]=14;
     srand(time(NULL));
     for(i=0; i<CARTES+1; i++){
         tab1[i]=(rand()%NB_DEP_MAX);
     }
+    tab1[3]=tab1[3]%2;
     Sleep(rand()%2000); //Permet d'augmenter les chances d'aléatoires
     for(i=0; i<CARTES+1; i++){
         tab2[i]=(rand()%NB_DEP_MAX);
     }
-
+    tab2[3]=tab2[3]%2;
     //Choix Du Joueur
     do{
     system("cls");
@@ -109,9 +113,9 @@ void Cartes_Aleatoire(int tab[]){
     printf("|                                         Black Fleet/Déplacement                                        |\n");
     printf("|--------------------------------------------------------------------------------------------------------|\n\n");
     printf("                            |-----Tirage1-----|            |-----Tirage2-----|\n");
-    color(c1,0);
+    color(couleur[tab1[3]],0);
     printf("                              -Frégate : %d                ", tab1[0]);
-    color(c2,0);
+    color(couleur[tab2[3]],0);
     printf("   -Frégate : %d\n", tab2[0]);
     color(15,0);
     printf("                              - Pirate : %d                   -Pirate : %d\n", tab1[1], tab2[1]);

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1651940899 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
+1651940982 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -126,7 +126,7 @@
 	"Menu.h"
 	"Affichage/Couleurs.h"
 
-1651940909 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.c
+1651965952 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
