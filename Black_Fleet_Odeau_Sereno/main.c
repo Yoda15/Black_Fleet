@@ -18,6 +18,7 @@ int main()
     ShowWindow(hwnd,SW_MAXIMIZE);    //En plein écran
     Joueur J[NBJ];
     S_Case P[Larg][Long];
+    int val_dep[CARTES+1]; //Valeur de déplacement de chaque bateau case 1:frégate, case 2:Pirate, case3:Marchand, case 4: couleur frégate
     //Test Matt
     int a;
     do{
@@ -39,6 +40,9 @@ int main()
         break;
     case 3:
         printf("3");
+        Cartes_Aleatoire(val_dep);
+        printf("%d", val_dep[0]);
+        Sleep(10000);
         break;
     case 4:
         printf("Fermeture...");

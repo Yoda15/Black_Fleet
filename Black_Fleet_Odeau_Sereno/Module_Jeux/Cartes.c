@@ -2,11 +2,14 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <conio.h>
+#include <time.h>
+#include <string.h>
 
 #include "../Objets.h"
 #include "../Affichage/Couleurs.h"
 
 void Achat_Carte(Joueur *J){
+    /**Achat de Carte de Développement et de Fin de Partie**/
     char choix[1];
     int i=0;
     int C;
@@ -82,8 +85,57 @@ void Achat_Carte(Joueur *J){
 
 
 
-/*
-void Carte_Aléatoire(int tab[]){
-    printf("ok");
+
+void Cartes_Aleatoire(int tab[]){
+    /**Tirage x2 de Cartes Aléatoires de Déplacement**/
+    color(4,0);
+    printf("\nTirage des Cartes... Merci de Patienter...");
+    color(15,0);
+    int tab1[CARTES+1], tab2[CARTES+1];
+    int c1=15,c2=15,k,i;
+    srand(time(NULL));
+    for(i=0; i<CARTES+1; i++){
+        tab1[i]=(rand()%NB_DEP_MAX);
+    }
+    Sleep(rand()%2000); //Permet d'augmenter les chances d'aléatoires
+    for(i=0; i<CARTES+1; i++){
+        tab2[i]=(rand()%NB_DEP_MAX);
+    }
+
+    //Choix Du Joueur
+    do{
+    system("cls");
+    printf("|--------------------------------------------------------------------------------------------------------|\n");
+    printf("|                                         Black Fleet/Déplacement                                        |\n");
+    printf("|--------------------------------------------------------------------------------------------------------|\n\n");
+    printf("                            |-----Tirage1-----|            |-----Tirage2-----|\n");
+    color(c1,0);
+    printf("                              -Frégate : %d                ", tab1[0]);
+    color(c2,0);
+    printf("   -Frégate : %d\n", tab2[0]);
+    color(15,0);
+    printf("                              - Pirate : %d                   -Pirate : %d\n", tab1[1], tab2[1]);
+    printf("                              - Marchand : %d                 -Marchand : %d\n\n", tab1[2], tab2[2]);
+    printf("Merci de faire votre choix (1/2): ");
+    scanf("%d", &k);
+    if(k!=1 && k!=2){
+        color(4,0);
+        printf("\nMerci de choisir une des deux options proposées !");
+        Sleep(2000);
+        color(15,0);
+    }
+    }while(k!=1 && k!=2);
+    switch(k){
+    case 1:
+        for(i=0; i<CARTES+1; i++){
+            tab[i]=tab1[i];
+        }
+        break;
+    case 2:
+        for(i=0; i<CARTES+1; i++){
+            tab[i]=tab2[i];
+        }
+        break;
+    }
 }
-*/
+

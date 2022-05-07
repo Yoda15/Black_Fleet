@@ -8,5 +8,7 @@
 #define NOIR 0
 #define Long 14
 #define Larg 12
+#define CARTES 3
+#define NB_DEP_MAX 6
 
 #endif // DECLARATIONS_VARIABLES_H_INCLUDED

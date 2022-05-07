@@ -7,7 +7,7 @@
 struct Case{
     int type; // 0 Terre, 1 Mer, 2 Mer lointaine, 3 cache au trésor, 4 Port outils, 5 port riz, 6 port blé, 7 port érable, 8 port vin
     int etat; // 0 si libre, 1 si occupé
-    int bateau; // 0 Marchandise, 1 Pirates, 2 Frégates,
+    int bateau; // 0 Marchandise, 1 Pirates, 2 Frégates1, 3 Frégates2
     int joueur; // 0,1,2,3 (Par ordre de passage);
 };
 typedef struct Case S_Case;
@@ -42,7 +42,7 @@ typedef struct Pirates Pirates;
 
 //Définition de l'objet frégate
 struct fregate{
-    int type; //1 ou 2 pour les différencier
+    int type; //0 ou 1 pour les différencier
     int coordonee[2]; //Case occupée
 };
 typedef struct fregate fregate;
