@@ -93,9 +93,7 @@ void Cartes_Aleatoire(int tab[]){
     color(15,0);
     int tab1[CARTES+1], tab2[CARTES+1];
     int k,i;
-    int couleur[2];
-    couleur[0]=5;
-    couleur[1]=14;
+    int couleur[2]={CF1,CF2};
     srand(time(NULL));
     for(i=0; i<CARTES+1; i++){
         tab1[i]=(rand()%NB_DEP_MAX);

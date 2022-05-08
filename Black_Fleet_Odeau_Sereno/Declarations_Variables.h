@@ -10,5 +10,7 @@
 #define Larg 12
 #define CARTES 3
 #define NB_DEP_MAX 6
+#define CF1 5
+#define CF2 14
 
 #endif // DECLARATIONS_VARIABLES_H_INCLUDED
