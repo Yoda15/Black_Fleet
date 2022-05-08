@@ -20,11 +20,11 @@ int Choix_Dep(int tab[]){
     printf("|--------------------------------------------------------------------------------------------------------|\n\n");
     printf("                                            |-----Tirage1-----|\n");
     color(couleur[tab[3]],0);
-    printf("                                              1-Frégate : %d", tab[0]);
+    printf("                                              1-Frégate : %d\n", tab[0]);
     color(15,0);
-    printf("                                              2-Pirate : %d", tab[1]);
+    printf("                                              2-Pirate : %d\n", tab[1]);
     printf("                                              3-Marchand : %d\n\n", tab[2]);
-    printf("                                              4-Fin des déplacements");
+    printf("                                              4-Fin des déplacements\n");
     printf("Merci de faire votre choix : ");
     scanf("%d", &k);
     if(k<1 || k>4){
@@ -46,6 +46,7 @@ void Verification_Case(int type, int tab[], int action, Joueur J[], S_Case P[][L
         while(i!=HAUT && i!=BAS && i!=DROITE && i!=GAUCHE){
         i=getch();
         }
+        Sleep(500);
         int y=F[tab[3]].coordonee[0], x=F[tab[3]].coordonee[1];
         switch(i){
         case HAUT: //Fléche du Haut

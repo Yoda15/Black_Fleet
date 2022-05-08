@@ -32,9 +32,10 @@ int main()
         initialiser_Plateau(P);
         while(J[0].Pioche.Fin_Partie==0 && J[1].Pioche.Fin_Partie==0 && J[2].Pioche.Fin_Partie==0 && J[3].Pioche.Fin_Partie==0){
             for(int i; i<4; i++){
-                J[0].doublons=12;
-                Achat_Carte(&J[0]);
+                J[i].doublons=12;
+                Cartes_Aleatoire(val_dep);
                 Deplacements(J,P,F,i,val_dep);
+                Achat_Carte(&J[i]);
                 printf("yes");
             }
         }
