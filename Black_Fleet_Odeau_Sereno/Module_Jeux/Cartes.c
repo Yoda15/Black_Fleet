@@ -63,6 +63,7 @@ void Achat_Carte(Joueur *J){
                 color(15,0);
                 (*J).Pioche.dev[C-1]=1;
                 (*J).doublons=(*J).doublons-Prix[C];
+                i=1;
                 Sleep(2000);
             }
             else if((*J).Pioche.dev[C-1]==1){

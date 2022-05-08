@@ -6,6 +6,7 @@
 #include "../Objets.h"
 #include "../Affichage/Couleurs.h"
 #include "../Declarations_Variables.h"
+#include "../Affichage/Plateau.h"
 
 int couleur[2]={CF1,CF2};
 
@@ -24,29 +25,176 @@ int Choix_Dep(int tab[]){
     printf("                                              2-Pirate : %d", tab[1]);
     printf("                                              3-Marchand : %d\n\n", tab[2]);
     printf("                                              4-Fin des déplacements");
-    printf("Merci de faire votre choix (1/2): ");
+    printf("Merci de faire votre choix : ");
     scanf("%d", &k);
-    if(k!=1 && k!=2){
+    if(k<1 || k>4){
         color(4,0);
         printf("\nMerci de choisir une des options proposées !");
         Sleep(2000);
         color(15,0);
     }
-    }while(k<0 || k>4);
+    }while(k<1 || k>4);
     return k;
 }
 
-void Deplacements(Joueur J[], S_Case P[][Long], int j, int tab[]){
+
+
+void Verification_Case(int type, int tab[], int action, Joueur J[], S_Case P[][Long], fregate F[], int j){
+    /**Vérification de la case choisie**/
+    int i, fin=1;
+    do{
+        while(i!=HAUT && i!=BAS && i!=DROITE && i!=GAUCHE){
+        i=getch();
+        }
+        int y=F[tab[3]].coordonee[0], x=F[tab[3]].coordonee[1];
+        switch(i){
+        case HAUT: //Fléche du Haut
+            if(P[x][y+1].etat==0){
+                if(P[x][y+1].type==0 || P[x][y+1].type==2){ //Vérification ni Côtes, ni Mer lointaine
+                    color(4,0);
+                    printf("\n\nImpossible Capitaine, nous allons nous échouer !!!");
+                    color(15,0);
+                }
+                else{
+                    if(type==1){ //si c'est une frégate
+                        F[tab[3]].coordonee[0]=y+1;
+                    }
+                    else if(type==2){
+                        J[j].P.coordonee[0]=y+1;
+                    }
+                    else{
+                        J[j].M.coordonee[0]=y+1;
+                    }
+                    P[x][y].etat=0;
+                    P[x][y+1].etat=0;
+                }
+            }
+            else{
+                //Vérifier Type Bateau
+                //Si pirate énemie tuer, puis déplacer, Action+1
+                //Si bateau allié vérifier nombre déplacement
+                //Sinon Déplacement Impossible
+            }
+            break;
+        case BAS: //Fléche du Bas
+            if(P[x][y-1].etat==0){
+                if(P[x][y-1].type==0 || P[x][y-1].type==2){
+                    color(4,0);
+                    printf("\n\nImpossible Capitaine, nous allons nous échouer !!!");
+                    color(15,0);
+                }
+                else{
+                    if(type==1){ //si c'est une frégate
+                        F[tab[3]].coordonee[0]=y-1;
+                    }
+                    else if(type==2){
+                        J[j].P.coordonee[0]=y-1;
+                    }
+                    else{
+                        J[j].M.coordonee[0]=y-1;
+                    }
+                    P[x][y].etat=0;
+                    P[x][y-1].etat=0;
+                }
+            }
+            else{
+                //Vérifier Type Bateau
+                //Si pirate énemie tuer, puis déplacer, Action+1
+                //Si bateau allié vérifier nombre déplacement
+                //Sinon Déplacement Impossible
+            }
+            break;
+        case GAUCHE: //Fléche de Gauche
+            if(P[x][y+1].etat==0){
+                if(P[x][y+1].type==0 || P[x][y-1].type==2){
+                    color(4,0);
+                    printf("\n\nImpossible Capitaine, nous allons nous échouer !!!");
+                    color(15,0);
+                }
+                else{
+                    if(type==1){ //si c'est une frégate
+                        F[tab[3]].coordonee[0]=y+1;
+                    }
+                    else if(type==2){
+                        J[j].P.coordonee[0]=y+1;
+                    }
+                    else{
+                        J[j].M.coordonee[0]=y+1;
+                    }
+                    P[x][y].etat=0;
+                    P[x][y+1].etat=0;
+                }
+            }
+            else{
+                //Vérifier Type Bateau
+                //Si pirate énemie tuer, puis déplacer, Action+1
+                //Si bateau allié vérifier nombre déplacement
+                //Sinon Déplacement Impossible
+            }
+            break;
+        case DROITE: //Fléche de Droite
+            if(P[x][y+1].etat==0){
+                if(P[x][y+1].type==0 || P[x][y-1].type==2){
+                    color(4,0);
+                    printf("\n\nImpossible Capitaine, nous allons nous échouer !!!");
+                    color(15,0);
+                }
+                else{
+                    if(type==1){ //si c'est une frégate
+                        F[tab[3]].coordonee[0]=y+1;
+                    }
+                    else if(type==2){
+                        J[j].P.coordonee[0]=y+1;
+                    }
+                    else{
+                        J[j].M.coordonee[0]=y+1;
+                    }
+                    P[x][y].etat=0;
+                    P[x][y+1].etat=0;
+                }
+            }
+            else{
+                //Vérifier Type Bateau
+                //Si pirate énemie tuer, puis déplacer, Action+1
+                //Si bateau allié vérifier nombre déplacement
+                //Sinon Déplacement Impossible
+            }
+            break;
+        case ECHAP:
+                fin=0;
+                break;
+            }
+    }while(fin!=0);
+}
+
+void Deplacements(Joueur J[], S_Case P[][Long], fregate F[], int j, int tab[]){
     /**Déplacement et Action de Chaque Joueur**/
-    int choix;
+    int choix, Action[3]={0,0,0};
     while(tab[0]!=0 && tab[1]!=0 && tab[2]!=0){
         choix=Choix_Dep(tab);
-        //switch(choix){
-        //case 1:
-        //case 2:
-        //case 3:
-        //case 4:
+        system("cls");
+        Affichage_Plateau(P, J);
+        switch(choix){
+        case 1:
+            if (tab[0]!=0){
+                Verification_Case(choix,tab,Action[0],J,P,F,j);
+            }
+            else{
+                color(4,0);
+                printf("\n\nPlus Aucun déplacement possible");
+                color(15,0);
+            }
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            tab[0]=0;
+            tab[1]=0;
+            tab[2]=0;
+            break;
 
-        //}
+        }
     }
 }

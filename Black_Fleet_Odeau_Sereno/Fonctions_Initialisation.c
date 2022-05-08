@@ -28,7 +28,7 @@ int Choix_Couleur(int *c){
 }
 
 
-void Initialisation(Joueur J[]){
+void Initialisation(Joueur J[], fregate F[]){
     /**Initialisation de l'objet "Joueur"**/
     int c_couleur[7];
     int i,j;
