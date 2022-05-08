@@ -23,6 +23,8 @@ int main()
     int val_dep[CARTES+1]; //Valeur de déplacement de chaque bateau case 1:frégate, case 2:Pirate, case3:Marchand, case 4: couleur frégate
 
     //Test Matt
+    J[0].M.coordonee[0]=0;
+    J[0].M.coordonee[1]=0;
     int a;
     do{
       a=menu();
@@ -71,7 +73,7 @@ int main()
         }
         printf("\n");
     }
-    Affichage_Plateau(P);
+    Affichage_Plateau(P,J);
     return 0;
     */
 

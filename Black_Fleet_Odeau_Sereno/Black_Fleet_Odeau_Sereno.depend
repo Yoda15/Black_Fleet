@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1652036344 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
+1652044690 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -14,12 +14,12 @@
 
 1652030074 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
 
-1652032828 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
+1652040009 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
 	"Declarations_Variables.h"
 
 1652030655 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
 
-1652032855 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
+1652040457 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -149,7 +149,7 @@
 	"../Objets.h"
 	"../Affichage/Couleurs.h"
 
-1652036833 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.c
+1652045513 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -159,5 +159,5 @@
 	"../Declarations_Variables.h"
 	"../Affichage/Plateau.h"
 
-1652029250 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.h
+1652040032 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.h
 

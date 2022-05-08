@@ -39,35 +39,56 @@ int Choix_Dep(int tab[]){
 
 
 
-void Verification_Case(int type, int tab[], int action, Joueur J[], S_Case P[][Long], fregate F[], int j){
+void Verification_Case(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long], fregate F[], int j){
     /**Vérification de la case choisie**/
-    int i, fin=1;
+    int i, fin=1, x,y;
     do{
+        system("cls");
+        printf("|--------------------------------------------------------------------------------------------------------|\n");
+        printf("|                                         Black Fleet/Déplacement                                        |\n");
+        printf("|--------------------------------------------------------------------------------------------------------|\n\n");
+        //Affichage_Plateau(P,J);
+        i=0;
         while(i!=HAUT && i!=BAS && i!=DROITE && i!=GAUCHE){
         i=getch();
         }
-        Sleep(500);
-        int y=F[tab[3]].coordonee[0], x=F[tab[3]].coordonee[1];
+        if(type==1){ //si c'est une frégate
+                int x=F[tab[3]].coordonee[0], y=F[tab[3]].coordonee[1];
+        }
+        else if(type==2){ //Si c'est un pirate
+                x=J[j].P.coordonee[0], y=J[j].P.coordonee[1];
+        }
+        else{ //Si c'est un marchand
+                x=F[tab[3]].coordonee[0], y=F[tab[3]].coordonee[1];
+        }
+        printf("\n%d    %d",J[j].M.coordonee[0],J[j].M.coordonee[1]);
+        Sleep(50);
         switch(i){
         case HAUT: //Fléche du Haut
             if(P[x][y+1].etat==0){
                 if(P[x][y+1].type==0 || P[x][y+1].type==2){ //Vérification ni Côtes, ni Mer lointaine
                     color(4,0);
                     printf("\n\nImpossible Capitaine, nous allons nous échouer !!!");
+                    printf("%d    %d",F[tab[3]].coordonee[0],y=F[tab[3]].coordonee[1]);
                     color(15,0);
+                    Sleep(2000);
                 }
                 else{
-                    if(type==1){ //si c'est une frégate
-                        F[tab[3]].coordonee[0]=y+1;
+                    if(*type==1){ //si c'est une frégate
+                        F[tab[3]].coordonee[1]=y+1;
                     }
-                    else if(type==2){
-                        J[j].P.coordonee[0]=y+1;
+                    else if(*type==2){
+                        J[j].P.coordonee[1]=y+1;
                     }
                     else{
-                        J[j].M.coordonee[0]=y+1;
+                        J[j].M.coordonee[1]=y+1;
                     }
                     P[x][y].etat=0;
-                    P[x][y+1].etat=0;
+                    P[x][y+1].etat=1;
+                    tab[*type-1]--;
+                    fin=0;
+                    printf("\n%d    %d",F[tab[3]].coordonee[0],F[tab[3]].coordonee[1]);
+                    Sleep(2000);
                 }
             }
             else{
@@ -162,23 +183,24 @@ void Verification_Case(int type, int tab[], int action, Joueur J[], S_Case P[][L
             }
             break;
         case ECHAP:
-                fin=0;
-                break;
-            }
+            fin=0;
+            *type=0;
+            break;
+        }
     }while(fin!=0);
 }
 
 void Deplacements(Joueur J[], S_Case P[][Long], fregate F[], int j, int tab[]){
     /**Déplacement et Action de Chaque Joueur**/
     int choix, Action[3]={0,0,0};
-    while(tab[0]!=0 && tab[1]!=0 && tab[2]!=0){
+    do{
         choix=Choix_Dep(tab);
-        system("cls");
-        Affichage_Plateau(P, J);
         switch(choix){
         case 1:
             if (tab[0]!=0){
-                Verification_Case(choix,tab,Action[0],J,P,F,j);
+                while(tab[0]!=0 && choix!=0){
+                    Verification_Case(&choix,tab,Action,J,P,F,j);
+                }
             }
             else{
                 color(4,0);
@@ -187,8 +209,24 @@ void Deplacements(Joueur J[], S_Case P[][Long], fregate F[], int j, int tab[]){
             }
             break;
         case 2:
+            if (tab[1]!=0){
+                Verification_Case(choix,tab,Action,J,P,F,j);
+            }
+            else{
+                color(4,0);
+                printf("\n\nPlus Aucun déplacement possible");
+                color(15,0);
+            }
             break;
         case 3:
+            if (tab[2]!=0){
+                Verification_Case(choix,tab,Action,J,P,F,j);
+            }
+            else{
+                color(4,0);
+                printf("\n\nPlus Aucun déplacement possible");
+                color(15,0);
+            }
             break;
         case 4:
             tab[0]=0;
@@ -197,5 +235,5 @@ void Deplacements(Joueur J[], S_Case P[][Long], fregate F[], int j, int tab[]){
             break;
 
         }
-    }
+    }while(tab[0]!=0 || tab[1]!=0 || tab[2]!=0);
 }

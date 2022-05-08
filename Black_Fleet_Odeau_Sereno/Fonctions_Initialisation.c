@@ -27,6 +27,15 @@ int Choix_Couleur(int *c){
     return colora;
 }
 
+void Depart(){
+    /**Case Départ Bateau**/
+    system("cls");
+    printf("|--------------------------------------------------------------------------------------------------------|\n");
+    printf("|                                                                                                        |\n");
+    printf("|-----------------------------------------------Black Fleet----------------------------------------------|\n");
+    printf("|                                                                                                        |\n");
+    printf("|--------------------------------------------------------------------------------------------------------|\n");
+}
 
 void Initialisation(Joueur J[], fregate F[]){
     /**Initialisation de l'objet "Joueur"**/
@@ -63,7 +72,12 @@ void Initialisation(Joueur J[], fregate F[]){
             J[i].Pioche.dev[j]=0;
         }
         J[i].Pioche.Fin_Partie=0;
+        Depart();
     }
+    F[0].coordonee[0]=6;
+    F[0].coordonee[1]=5;
+    F[1].coordonee[0]=5;
+    F[1].coordonee[1]=8;
 }
 
 
