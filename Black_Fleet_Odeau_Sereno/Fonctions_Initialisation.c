@@ -78,8 +78,8 @@ void Initialisation(Joueur J[], fregate F[]){
     F[0].coordonee[1]=5;
     F[1].coordonee[0]=5;
     F[1].coordonee[1]=8;
-    F[1].couleur=5;
-    F[1].couleur=14;
+    F[0].couleur=CF1;
+    F[1].couleur=CF2;
 }
 
 
@@ -144,6 +144,13 @@ void initialiser_Plateau(S_Case P[][Long])
     //initialiser case port vin
     P[5][13].type=8;
     P[6][13].type=8;
+
+    // initialiser case frégate
+    P[6][5].etat=1;
+    P[5][8].etat=1;
+    P[6][5].bateau=2;
+    P[5][8].bateau=3;
+
 }
 
 

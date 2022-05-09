@@ -47,7 +47,7 @@ void Verification_Case(int *type, int tab[], int action[], Joueur J[], S_Case P[
         printf("|--------------------------------------------------------------------------------------------------------|\n");
         printf("|                                         Black Fleet/Déplacement                                        |\n");
         printf("|--------------------------------------------------------------------------------------------------------|\n\n");
-        //Affichage_Plateau(P,J);
+        Affichage_Plateau(P,J,F);
         i=0;
         while(i!=HAUT && i!=BAS && i!=DROITE && i!=GAUCHE){
         i=getch();

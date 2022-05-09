@@ -24,6 +24,7 @@ void Affichage_Plateau(S_Case P[][Long],Joueur J[],fregate F[])
             {
             case 0:
                 color(2,2);
+                printf("%10d",P[i][j].type);
                 break;
             case 2:
                 c=1;
@@ -58,11 +59,10 @@ void Affichage_Plateau(S_Case P[][Long],Joueur J[],fregate F[])
                 Affichage_Bateau(P,F,i,j,J,c);
 
             }
-            printf("%10d",P[i][j].type);
             color(15,0);
         }
         printf("\n");
-        for(k=0;k<((10*Long)+Long);k++)
+        for(k=0; k<((10*Long)+Long); k++)
         {
             printf("-");
         }
@@ -73,11 +73,7 @@ void Affichage_Plateau(S_Case P[][Long],Joueur J[],fregate F[])
 void Affichage_Bateau(S_Case P[][Long],fregate F[],int i,int j,Joueur J[],int c)
 {
     char t[2];
-    if(P[i][j].etat==0)
-    {
-
-    }
-    else
+    if(P[i][j].etat==1)
     {
         switch(P[i][j].bateau)
         {
@@ -88,17 +84,24 @@ void Affichage_Bateau(S_Case P[][Long],fregate F[],int i,int j,Joueur J[],int c)
             break;
         case 1:
             color(J[(P[i][j].joueur)].couleur,c);
-             printf(" Pirate-%d ",J[(P[i][j].joueur)].P.marchandise);
+            printf(" Pirate-%d ",J[(P[i][j].joueur)].P.marchandise);
             break;
         case 2:
-            color(F[].couleur,c);
+            color(F[0].couleur,c);
             printf(" Frégate  ");
             break;
-
-
+        case 3:
+            color(F[1].couleur,c);
+            printf(" Frégate  ");
+            break;
         }
     }
-}
+    else
+    {
+        color (c,c);
+        printf("%10d",P[i][j].type);
 
+    }
+}
 
 
