@@ -78,6 +78,8 @@ void Initialisation(Joueur J[], fregate F[]){
     F[0].coordonee[1]=5;
     F[1].coordonee[0]=5;
     F[1].coordonee[1]=8;
+    F[1].couleur=5;
+    F[1].couleur=14;
 }
 
 

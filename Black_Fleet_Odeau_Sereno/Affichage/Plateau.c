@@ -7,12 +7,12 @@
 
 
 
-void Affichage_Plateau(S_Case P[][Long],Joueur J[]);
-void Affichage_Bateau(S_Case P[][Long],int i,int j,Joueur J[],int c);
+void Affichage_Plateau(S_Case P[][Long],Joueur J[],fregate F[]);
+void Affichage_Bateau(S_Case P[][Long],fregate F[],int i,int j,Joueur J[],int c);
 
 
 S_Case P[Larg][Long];
-void Affichage_Plateau(S_Case P[][Long],Joueur J[])
+void Affichage_Plateau(S_Case P[][Long],Joueur J[],fregate F[])
 {
     int i=0,j=0,k=0,c=0;
     for (i=0; i<Larg; i++)
@@ -27,35 +27,35 @@ void Affichage_Plateau(S_Case P[][Long],Joueur J[])
                 break;
             case 2:
                 c=1;
-                Affichage_Bateau(P,i,j,J,c);
+                Affichage_Bateau(P,F,i,j,J,c);
                 break;
             case 3:
                 c=14;
-                Affichage_Bateau(P,i,j,J,c);
+                Affichage_Bateau(P,F,i,j,J,c);
                 break;
             case 4:
                 c=3;
-                Affichage_Bateau(P,i,j,J,c);
+                Affichage_Bateau(P,F,i,j,J,c);
                 break;
             case 5:
                 c=10;
-                Affichage_Bateau(P,i,j,J,c);
+                Affichage_Bateau(P,F,i,j,J,c);
                 break;
             case 6:
                 c=12;
-                Affichage_Bateau(P,i,j,J,c);
+                Affichage_Bateau(P,F,i,j,J,c);
                 break;
             case 7:
                 c=5;
-                Affichage_Bateau(P,i,j,J,c);
+                Affichage_Bateau(P,F,i,j,J,c);
                 break;
             case 8:
                 c=4;
-                Affichage_Bateau(P,i,j,J,c);
+                Affichage_Bateau(P,F,i,j,J,c);
                 break;
             default:
                 c=9;
-                Affichage_Bateau(P,i,j,J,c);
+                Affichage_Bateau(P,F,i,j,J,c);
 
             }
             printf("%10d",P[i][j].type);
@@ -70,7 +70,7 @@ void Affichage_Plateau(S_Case P[][Long],Joueur J[])
     }
 }
 
-void Affichage_Bateau(S_Case P[][Long],int i,int j,Joueur J[],int c)
+void Affichage_Bateau(S_Case P[][Long],fregate F[],int i,int j,Joueur J[],int c)
 {
     char t[2];
     if(P[i][j].etat==0)
@@ -91,17 +91,11 @@ void Affichage_Bateau(S_Case P[][Long],int i,int j,Joueur J[],int c)
              printf(" Pirate-%d ",J[(P[i][j].joueur)].P.marchandise);
             break;
         case 2:
-            if(0==1)
-            {
-                color(5,c);
-                printf(" Frégate  ");
-            }
-            else
-            {
-                color(14,c);
-                printf(" Frégate  ");
-            }
+            color(F[].couleur,c);
+            printf(" Frégate  ");
             break;
+
+
         }
     }
 }

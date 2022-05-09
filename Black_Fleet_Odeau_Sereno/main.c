@@ -45,7 +45,7 @@ int main()
     case 2:
         //Regles();
         initialiser_Plateau(P);
-        Affichage_Plateau(P,J);
+        Affichage_Plateau(P,J,F);
         Sleep(20000);
         break;
     case 3:

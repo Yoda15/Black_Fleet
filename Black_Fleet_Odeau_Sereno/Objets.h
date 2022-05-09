@@ -43,6 +43,7 @@ typedef struct Pirates Pirates;
 //Définition de l'objet frégate
 struct fregate{
     int coordonee[2]; //Case occupée
+    int couleur;
 };
 typedef struct fregate fregate;
 
