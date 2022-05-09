@@ -72,8 +72,10 @@ void Initialisation(Joueur J[], fregate F[]){
             J[i].Pioche.dev[j]=0;
         }
         J[i].Pioche.Fin_Partie=0;
+        J[i].nb=i;
         Depart();
     }
+    //Initialisation des frégates
     F[0].coordonee[0]=6;
     F[0].coordonee[1]=5;
     F[1].coordonee[0]=5;
@@ -128,6 +130,7 @@ void initialiser_Plateau(S_Case P[][Long])
     //initialiser case mer lointaine
     P[1][13].type=2;
     P[4][0].type=2;
+    P[5][0].type=2;
     P[10][13].type=2;
     //initialiser case port outils
     P[0][6].type=4;

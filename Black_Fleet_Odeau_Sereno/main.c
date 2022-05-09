@@ -10,7 +10,7 @@
 #include "Menu.h"
 #include "Module_Jeux/Cartes.h"
 #include "Module_Jeux/Déplacements.h"
-
+#include "Module_Jeux/Placements.h"
 
 int main()
 {
@@ -23,8 +23,6 @@ int main()
     int val_dep[CARTES+1]; //Valeur de déplacement de chaque bateau case 1:frégate, case 2:Pirate, case3:Marchand, case 4: couleur frégate
 
     //Test Matt
-    J[0].M.coordonee[0]=0;
-    J[0].M.coordonee[1]=0;
     int a;
     do{
       a=menu();
@@ -32,9 +30,12 @@ int main()
     case 1:
         Initialisation(J,F);
         initialiser_Plateau(P);
+        for(int i=0;i<4;i++){
+            Placement_Bateau(&J[i],P,F);
+        }
         while(J[0].Pioche.Fin_Partie==0 && J[1].Pioche.Fin_Partie==0 && J[2].Pioche.Fin_Partie==0 && J[3].Pioche.Fin_Partie==0){
-            for(int i; i<4; i++){
-                J[i].doublons=12;
+            for(int i=0; i<4; i++){
+                Placement_Bateau(&J[i],P, F);
                 Cartes_Aleatoire(val_dep);
                 Deplacements(J,P,F,i,val_dep);
                 Achat_Carte(&J[i]);
@@ -43,10 +44,7 @@ int main()
         }
         break;
     case 2:
-        //Regles();
-        initialiser_Plateau(P);
-        Affichage_Plateau(P,J,F);
-        Sleep(20000);
+        Regles();
         break;
     case 3:
         printf("3");

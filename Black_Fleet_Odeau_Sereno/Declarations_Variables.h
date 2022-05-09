@@ -2,7 +2,8 @@
 #define DECLARATIONS_VARIABLES_H_INCLUDED
 
 #define NBCHAR 25
-#define BLANC 16
+#define BLANC 15
+#define ROUGE 4
 #define NBJ 4
 #define NBC 4
 #define NOIR 0
@@ -20,5 +21,15 @@
 #define GAUCHE 75
 #define DROITE 77
 #define ECHAP 27
+#define ESPACE 13
+
+#define TRESOR 4
+#define TOUCHE_COULE 5
+
+#define PORT_OUTILS 0
+#define PORT_RIZ 1
+#define PORT_BLE 2
+#define PORT_ERABLE 3
+#define PORT_VIN 4
 
 #endif // DECLARATIONS_VARIABLES_H_INCLUDED

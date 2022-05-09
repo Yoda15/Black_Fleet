@@ -12,7 +12,7 @@
 
 void boucle_verif(){
     int i=0;
-    while (i!=13){
+    while (i!=ESPACE){
         i=getch();
     }
 }
