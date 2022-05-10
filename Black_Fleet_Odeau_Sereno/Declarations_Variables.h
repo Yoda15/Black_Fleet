@@ -12,7 +12,7 @@
 #define Larg 12
 
 #define CARTES 3
-#define NB_DEP_MAX 6
+#define NB_DEP_MAX 100
 #define CF1 5
 #define CF2 14
 
@@ -25,6 +25,7 @@
 
 #define TRESOR 4
 #define TOUCHE_COULE 5
+#define MARCHAND_COULE 2
 
 #define PORT_OUTILS 0
 #define PORT_RIZ 1
