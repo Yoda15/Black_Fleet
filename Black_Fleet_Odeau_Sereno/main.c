@@ -48,6 +48,9 @@ int main()
         Regles();
         break;
     case 3:
+        system("cls");
+        printf("|------------------------------Black Fleet------------------------------|\n");
+        printf("                      ODEAU Simon & SERENO Matthieu");
         Sleep(10000);
         break;
     case 4:
