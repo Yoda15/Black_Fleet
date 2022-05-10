@@ -72,7 +72,7 @@ void Affichage_Plateau(S_Case P[][Long],Joueur J[],fregate F[])
 
 void Affichage_Bateau(S_Case P[][Long],fregate F[],int i,int j,Joueur J[],int c)
 {
-    char t[2];
+    char t[3];
     if(P[i][j].etat==1)
     {
         switch(P[i][j].bateau)
