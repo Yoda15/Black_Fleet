@@ -27,8 +27,12 @@ void Fin_de_partie(Joueur J[])
             j=i;
         }
     }
+    system("cls");
+    printf("|--------------------------------------------------------------------------------------------------------|\n");
+    printf("|                                      Black Fleet/Fin de la partie                                      |\n");
+    printf("|--------------------------------------------------------------------------------------------------------|\n\n");
     color(4,0);
-    printf("Bravo %s! Vous êtes le plus grand pirate du monde !",J[j].nom);
+    printf("                           Bravo %s! Vous êtes le plus grand pirate du monde !",J[j].nom);
     Sleep(5000);
     color(15,0);
 
