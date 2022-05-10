@@ -6,4 +6,4 @@ Odeau Simon
 Sereno Matthieu
 ####
 
-Version 0.1
+Version 1.1
