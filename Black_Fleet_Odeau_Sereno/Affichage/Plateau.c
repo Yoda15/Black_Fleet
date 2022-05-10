@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+
 #include "../Declarations_Variables.h"
 #include "../Objets.h"
 #include "Couleurs.h"
@@ -103,5 +104,3 @@ void Affichage_Bateau(S_Case P[][Long],fregate F[],int i,int j,Joueur J[],int c)
 
     }
 }
-
-

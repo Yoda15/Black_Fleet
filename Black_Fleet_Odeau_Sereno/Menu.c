@@ -19,6 +19,7 @@ void boucle_verif(){
 
 
 int menu(){
+    /**Permet l'Affichage et le Fonctionnement du Menu**/
     int i;
     do{
     system("cls");

@@ -6,21 +6,20 @@
 #include "Objets.h"
 #include "Fonctions_Initialisation.h"
 #include "Affichage/Couleurs.h"
+#include "Module_Jeux/Message.h"
 
 
 
 int Choix_Couleur(int *c){
     /**Choix de la Couleur**/
     int colora=-1;
-    while (((colora!=0) && (colora!=1) && (colora!=2) && (colora!=3) && (colora!=4) && (colora!=5) && (colora!=6)) || (c[colora]==-1)){ //Permet de vérifier que la couleur sélectionner est compris entre 1 et 15 et qu'elle n'a pas déjà était sélectionné ou indisponible
+    while (((colora!=0) && (colora!=1) && (colora!=2) && (colora!=3) && (colora!=4) && (colora!=5) && (colora!=6) && (colora!=7)) || (c[colora]==-1)){ //Permet de vérifier que la couleur sélectionner est compris entre 1 et 15 et qu'elle n'a pas déjà était sélectionné ou indisponible
         printf("\nVeuillez Choisir une couleur : ");
-        printf("\n -Noir 0\n -Marron 1\n -Gris(Clair) 2\n -Gris(Foncé) 3\n -Cyan(Clair) 4\n -Magenta(Clair) 5\n -Blanc 6\n");
+        printf("\n -Noir 0\n -Rouge 1\n -Marron 2\n -Gris(Clair) 3\n -Gris(Foncé) 4\n -Cyan(Clair) 5\n -Magenta(Clair) 6\n -Blanc 7\n");
         printf("\nNuméro de la Couleur: ");
         scanf("%d", &colora);
-        if (c[colora]==-1){
-            color(4,0);
-            printf("Couleur Déjà Selectionné ! Merci d'en choisir une autre.");
-            color(15,0);
+        if (c[colora]==-1){ //Vérification Couleur nouvelle
+            Messages(18);
         }
     }
     c[colora]=-1;
@@ -39,16 +38,17 @@ void Depart(){
 
 void Initialisation(Joueur J[], fregate F[]){
     /**Initialisation de l'objet "Joueur"**/
-    int c_couleur[7];
+    int c_couleur[8];
     int i,j;
     //Initialisation des couleurs disponible
     c_couleur[0]=0;
-    c_couleur[1]=6;
-    c_couleur[2]=7;
-    c_couleur[3]=8;
-    c_couleur[4]=11;
-    c_couleur[5]=13;
-    c_couleur[6]=15;
+    c_couleur[1]=ROUGE;
+    c_couleur[2]=6;
+    c_couleur[3]=7;
+    c_couleur[4]=8;
+    c_couleur[5]=11;
+    c_couleur[6]=13;
+    c_couleur[7]=15;
     for(i=0; i<NBJ; i++){ //Boucle permettant de compléter la structure de chaque joueur
         system("cls");
         printf("|--------------------------------------------------------------------------------------------------------|\n");

@@ -7,6 +7,7 @@
 #define NBJ 4
 #define NBC 4
 #define NOIR 0
+#define BLEU 11
 
 #define Long 14
 #define Larg 12
@@ -26,6 +27,9 @@
 #define TRESOR 4
 #define TOUCHE_COULE 5
 #define MARCHAND_COULE 2
+#define ASSURANCE_PERTE 2
+#define ASSURANCE_COULE 6
+#define BONUS_PIRATES 5
 
 #define PORT_OUTILS 0
 #define PORT_RIZ 1

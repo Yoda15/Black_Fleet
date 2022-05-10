@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+
 #include "../Objets.h"
 
 
 void color(int couleurDuTexte,int couleurDeFond) // fonction d'affichage de couleurs
 {
+        /**Changer Couleur Console**/
         HANDLE H=GetStdHandle(STD_OUTPUT_HANDLE);
         SetConsoleTextAttribute(H,couleurDeFond*16+couleurDuTexte);
 }

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1652138272 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
+1652211279 source:d:\github\black_fleet\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -12,15 +12,16 @@
 	"Module_Jeux/Cartes.h"
 	"Module_Jeux/Déplacements.h"
 	"Module_Jeux/Placements.h"
+	"Module_Jeux/Fin_Partie.h"
 
-1652197428 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
+1652220676 d:\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
 
-1652113675 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
+1652207991 d:\github\black_fleet\black_fleet_odeau_sereno\objets.h
 	"Declarations_Variables.h"
 
 1652030655 d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
 
-1652136398 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
+1652221536 source:d:\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -29,21 +30,23 @@
 	"Objets.h"
 	"Fonctions_Initialisation.h"
 	"Affichage/Couleurs.h"
+	"Module_Jeux/Message.h"
 
 1650882016 d:\github\black_fleet\black_fleet_odeau_sereno\joueur.h
 	"Objets.h"
 
 1650981497 d:\github\black_fleet\black_fleet_odeau_sereno\couleurs.h
 
-1652190587 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.c
+1652207662 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	"../Objets.h"
 
-1651870809 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.h
+1652209947 d:\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.h
+	"../Objets.h"
 
-1652190587 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.c
+1652208544 source:d:\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -130,7 +133,7 @@
 	"Menu.h"
 	"Affichage/Couleurs.h"
 
-1652034102 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.c
+1652221082 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -139,8 +142,9 @@
 	<string.h>
 	"../Objets.h"
 	"../Affichage/Couleurs.h"
+	"Message.h"
 
-1651940895 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
+1652210762 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
 
 1652082822 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
 
@@ -154,7 +158,7 @@
 	"../Objets.h"
 	"../Affichage/Couleurs.h"
 
-1652202673 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.c
+1652221105 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -163,6 +167,7 @@
 	"../Affichage/Couleurs.h"
 	"../Declarations_Variables.h"
 	"../Affichage/Plateau.h"
+	"Message.h"
 
 1652040032 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.h
 
@@ -178,7 +183,7 @@
 	"../Declarations_Variables.h"
 	"../Affichage/Plateau.h"
 
-1652139127 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\placements.c
+1652221273 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\placements.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -187,7 +192,7 @@
 	"../Objets.h"
 	"../Affichage/Couleurs.h"
 	"../Affichage/Plateau.h"
-	"Déplacements.h"
+	"Message.h"
 
 1652138284 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\placements.h
 
@@ -203,4 +208,23 @@
 	"../Affichage/Couleurs.h"
 	"../Affichage/Plateau.h"
 	"Déplacements.h"
+
+1652202720 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\fin_partie.h
+
+1652202720 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\fin_partie.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"../Objets.h"
+	"../Affichage/Couleurs.h"
+
+1652211721 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\message.h
+
+1652221494 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\message.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"../Affichage/Couleurs.h"
 

@@ -59,6 +59,4 @@ struct Joueur{
 };
 typedef struct Joueur Joueur;
 
-
-
 #endif // OBJETS_H_INCLUDED

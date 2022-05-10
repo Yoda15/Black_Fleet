@@ -4,5 +4,4 @@
 int menu();
 void Regles();
 
-
 #endif // MENU_H_INCLUDED
