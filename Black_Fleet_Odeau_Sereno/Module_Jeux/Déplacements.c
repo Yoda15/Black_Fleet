@@ -164,13 +164,13 @@ void Case_Libre(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long]
             }
             else if(P[Position[3]][Position[2]].type==1 || action[*type-1]!=1) //si case mer ou action non effectué
             {
-                Mr_Propre(type, tab, P, Position,j,action,J); //si action effectué
+                Mr_Propre(type, tab, P, Position,j,action,J);
                 P[Position[3]][Position[2]].bateau=0;
                 J[j].M.coordonee[0]=Position[3];
                 J[j].M.coordonee[1]=Position[2];
 
             }
-            else if(action[*type-1]==1)
+            else if(action[*type-1]==1) //si action effectué
             {
                 Messages(5);
             }
@@ -374,11 +374,14 @@ void Deplacements(Joueur J[], S_Case P[][Long], fregate F[], int j, int tab[])
         switch(choix)
         {
         case 1: //Si Frégate
-            if (tab[0]!=0) //si il reste des déplacements
+            if (tab[0]>0) //si il reste des déplacements
             {
-                while((tab[0]!=0 || Action[0]!=1) && choix!=0)
+                while((tab[0]>0 || Action[0]!=1) && choix!=0)
                 {
                     Verification_Case(&choix,tab,Action,J,P,F,j);
+                    if(tab[0]<=0){
+                        Action[0]=1;
+                    }
                 }
             }
             else
@@ -387,11 +390,14 @@ void Deplacements(Joueur J[], S_Case P[][Long], fregate F[], int j, int tab[])
             }
             break;
         case 2: // Si Pirates
-            if (tab[1]!=0)
+            if (tab[1]>0)
             {
-                while((tab[1]!=0 || Action[1]!=1) && choix!=0)
+                while((tab[1]>0 || Action[1]!=1) && choix!=0)
                 {
                     Verification_Case(&choix,tab,Action,J,P,F,j);
+                    if(tab[1]<=0){
+                        Action[1]=1;
+                    }
                 }
             }
             else
@@ -400,11 +406,14 @@ void Deplacements(Joueur J[], S_Case P[][Long], fregate F[], int j, int tab[])
             }
             break;
         case 3: //Si Marchands
-            if (tab[2]!=0)
+            if (tab[2]>0)
             {
-                while((tab[2]!=0 || Action[2]!=1) && choix!=0)
+                while((tab[2]>0 || Action[2]!=1) && choix!=0)
                 {
                     Verification_Case(&choix,tab,Action,J,P,F,j);
+                    if(tab[2]<=0){
+                        Action[2]=1;
+                    }
                 }
             }
             else

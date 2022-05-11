@@ -252,3 +252,127 @@
 	<conio.h>
 	"../Affichage/Couleurs.h"
 
+1652261802 source:c:\users\5844600\downloads\black_fleet_odeau_sereno\affichage\couleurs.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../Objets.h"
+
+1652261802 c:\users\5844600\downloads\black_fleet_odeau_sereno\objets.h
+	"Declarations_Variables.h"
+
+1652274097 c:\users\5844600\downloads\black_fleet_odeau_sereno\declarations_variables.h
+
+1652261802 source:c:\users\5844600\downloads\black_fleet_odeau_sereno\affichage\plateau.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../Declarations_Variables.h"
+	"../Objets.h"
+	"Couleurs.h"
+
+1652261802 c:\users\5844600\downloads\black_fleet_odeau_sereno\affichage\couleurs.h
+	"../Objets.h"
+
+1652261802 source:c:\users\5844600\downloads\black_fleet_odeau_sereno\fonctions_initialisation.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"Declarations_Variables.h"
+	"Objets.h"
+	"Fonctions_Initialisation.h"
+	"Affichage/Couleurs.h"
+	"Module_Jeux/Message.h"
+
+1652261802 c:\users\5844600\downloads\black_fleet_odeau_sereno\fonctions_initialisation.h
+
+1652261802 c:\users\5844600\downloads\black_fleet_odeau_sereno\module_jeux\message.h
+
+1652274731 source:c:\users\5844600\downloads\black_fleet_odeau_sereno\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"Declarations_Variables.h"
+	"Objets.h"
+	"Fonctions_Initialisation.h"
+	"Affichage/Plateau.h"
+	"Menu.h"
+	"Module_Jeux/Cartes.h"
+	"Module_Jeux/Déplacements.h"
+	"Module_Jeux/Placements.h"
+	"Module_Jeux/Fin_Partie.h"
+
+1652261802 c:\users\5844600\downloads\black_fleet_odeau_sereno\affichage\plateau.h
+
+1652261802 c:\users\5844600\downloads\black_fleet_odeau_sereno\menu.h
+
+1652261802 c:\users\5844600\downloads\black_fleet_odeau_sereno\module_jeux\cartes.h
+
+1652261802 c:\users\5844600\downloads\black_fleet_odeau_sereno\module_jeux\déplacements.h
+
+1652261802 c:\users\5844600\downloads\black_fleet_odeau_sereno\module_jeux\placements.h
+
+1652261802 c:\users\5844600\downloads\black_fleet_odeau_sereno\module_jeux\fin_partie.h
+
+1652261802 source:c:\users\5844600\downloads\black_fleet_odeau_sereno\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"Declarations_Variables.h"
+	"Objets.h"
+	"Fonctions_Initialisation.h"
+	"Affichage/Plateau.h"
+	"Menu.h"
+	"Affichage/Couleurs.h"
+
+1652273298 source:c:\users\5844600\downloads\black_fleet_odeau_sereno\module_jeux\cartes.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	<time.h>
+	<string.h>
+	"../Objets.h"
+	"../Affichage/Couleurs.h"
+	"Message.h"
+
+1652274521 source:c:\users\5844600\downloads\black_fleet_odeau_sereno\module_jeux\déplacements.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"../Objets.h"
+	"../Affichage/Couleurs.h"
+	"../Declarations_Variables.h"
+	"../Affichage/Plateau.h"
+	"Message.h"
+
+1652261802 source:c:\users\5844600\downloads\black_fleet_odeau_sereno\module_jeux\fin_partie.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"../Objets.h"
+	"../Affichage/Couleurs.h"
+
+1652261802 source:c:\users\5844600\downloads\black_fleet_odeau_sereno\module_jeux\message.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"../Affichage/Couleurs.h"
+
+1652261802 source:c:\users\5844600\downloads\black_fleet_odeau_sereno\module_jeux\placements.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"../Declarations_Variables.h"
+	"../Objets.h"
+	"../Affichage/Couleurs.h"
+	"../Affichage/Plateau.h"
+	"Message.h"
+

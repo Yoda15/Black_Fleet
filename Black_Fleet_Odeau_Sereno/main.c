@@ -22,7 +22,7 @@ int main()
     S_Case P[Larg][Long]; //Création Plateau
     fregate F[2];
     int val_dep[CARTES+1]; //Valeur de déplacement de chaque bateau case 1:frégate, case 2:Pirate, case3:Marchand, case 4: couleur frégate
-    int a;
+    int a,i;
     do{
       a=menu();
     switch (a){
@@ -31,11 +31,11 @@ int main()
         Initialisation(J,F);
         initialiser_Plateau(P);
         //Placement Initial Bateau
-        for(int i=0;i<4;i++){
+        for(i=0;i<4;i++){
             Placement_Bateau(&J[i],P,F);
         }
         while(J[0].Pioche.Fin_Partie==0 && J[1].Pioche.Fin_Partie==0 && J[2].Pioche.Fin_Partie==0 && J[3].Pioche.Fin_Partie==0){
-            for(int i=0; i<4; i++){ //Tour
+            for(i=0; i<4; i++){ //Tour
                 Placement_Bateau(&J[i],P, F);
                 Cartes_Aleatoire(val_dep,J[i]);
                 Deplacements(J,P,F,i,val_dep);

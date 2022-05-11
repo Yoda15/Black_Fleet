@@ -73,12 +73,13 @@ void Achat_Carte(Joueur *J){
 
 void Tirage_Choisi(int tab[], Joueur J, int tabx[]){
     /**Transfert Choix_Tirage->Carte déplacements**/
-    for(int i=0; i<CARTES+1; i++){ //Selon le Tirage Choisi
+    int i;
+    for(i=0; i<CARTES+1; i++){ //Selon le Tirage Choisi
         tab[i]=tabx[i];
     }
     if(J.Pioche.dev[2]==1){ //Si carte dev 3 débloqué, alors +1 déplacements
-        for(int i=0; i<CARTES; i++){
-            tabx[i]++;
+        for(i=0; i<CARTES; i++){
+            tab[i]++;
         }
     }
 }
