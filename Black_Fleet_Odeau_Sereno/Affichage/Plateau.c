@@ -23,39 +23,39 @@ void Affichage_Plateau(S_Case P[][Long],Joueur J[],fregate F[])
             printf("|");
             switch(P[i][j].type)
             {
-            case 0:
+            case 0:  // Terre
                 color(2,2);
                 printf("%10d",P[i][j].type);
                 break;
-            case 2:
+            case 2:  // Mer lointaine
                 c=1;
                 Affichage_Bateau(P,F,i,j,J,c);
                 break;
-            case 3:
+            case 3:  // Trésor
                 c=14;
                 Affichage_Bateau(P,F,i,j,J,c);
                 break;
-            case 4:
+            case 4:  // Port d'outils
                 c=3;
                 Affichage_Bateau(P,F,i,j,J,c);
                 break;
-            case 5:
+            case 5:  // Port de riz
                 c=10;
                 Affichage_Bateau(P,F,i,j,J,c);
                 break;
-            case 6:
+            case 6:  // Port de blé
                 c=12;
                 Affichage_Bateau(P,F,i,j,J,c);
                 break;
-            case 7:
+            case 7:  // Port d'érable
                 c=5;
                 Affichage_Bateau(P,F,i,j,J,c);
                 break;
-            case 8:
+            case 8:  // Port de vin
                 c=4;
                 Affichage_Bateau(P,F,i,j,J,c);
                 break;
-            default:
+            default:  // Mer
                 c=9;
                 Affichage_Bateau(P,F,i,j,J,c);
 
@@ -69,6 +69,16 @@ void Affichage_Plateau(S_Case P[][Long],Joueur J[],fregate F[])
         }
         printf("\n");
     }
+    printf("\n ______________________________________________________________________________________________________________\n");
+    printf("| Port d'outils (cyan)|  Port de riz (vert) | Port de blé (orange)|Port d'érable(magenta)| Port de vin (rouge) |\n");
+    printf("|---------------------+---------------------+---------------------+----------------------+---------------------|\n");
+    printf("| outils : // doublons| outils : 1 doublon  | outils : 3 doublons | outils : 3 doublons  | outils : 2 doublons |\n");
+    printf("| riz : 1 doublon     | riz : // doublons   | riz : 2 doublons    | riz : 2 doublons     | riz : 3 doublons    |\n");
+    printf("| blé : 3 doublons    | blé : 2 doublons    | blé : // doublons   | blé : 1 doublon      | blé : 2 doublons    |\n");
+    printf("| érable : 2 doublons | érable : 3 doublons | érable : 1 doublon  | érable : // doublons | érable : 2 doublons |\n");
+    printf("| vin : 2 doublons    | vin : 2 doublons    | vin : 3 doublons    | vin : 2 doublons     | vin : // doublons   |\n");
+    printf("----------------------------------------------------------------------------------------------------------------\n");
+
 }
 
 void Affichage_Bateau(S_Case P[][Long],fregate F[],int i,int j,Joueur J[],int c)

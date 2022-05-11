@@ -11,13 +11,14 @@
 
 int couleur[2]= {CF1,CF2};
 int Vente[5][5]= {{1,3,2,2,0},{0,2,3,2,1},{2,0,1,3,3},{2,1,0,2,3},{3,2,2,0,2}};
-int Type_March[5]={PORT_OUTILS,PORT_RIZ,PORT_BLE,PORT_ERABLE,PORT_VIN};
+int Type_March[5]= {PORT_OUTILS,PORT_RIZ,PORT_BLE,PORT_ERABLE,PORT_VIN};
 
 int Choix_Dep(int tab[],Joueur J)
 {
     /**Choix d'un déplacement**/
     int k;
-    do{
+    do
+    {
         system("cls");
         printf("|--------------------------------------------------------------------------------------------------------|\n");
         printf("|                                         Black Fleet/Déplacement                                        |\n");
@@ -36,7 +37,8 @@ int Choix_Dep(int tab[],Joueur J)
         printf("                                              4-Fin des déplacements\n");
         printf("Merci de faire votre choix : ");
         scanf("%d", &k);
-        if(k<1 || k>4){
+        if(k<1 || k>4)
+        {
             color(4,0);
             printf("\nMerci de choisir une des options proposées !");
             Sleep(2000);
@@ -47,7 +49,8 @@ int Choix_Dep(int tab[],Joueur J)
     return k;
 }
 
-void Mr_Propre(int *type, int tab[], S_Case P[][Long], int Position[], int j, int action[], Joueur J[]){
+void Mr_Propre(int *type, int tab[], S_Case P[][Long], int Position[], int j, int action[], Joueur J[])
+{
     //Netoyage après passage et -1 déplacement
     P[Position[1]][Position[0]].etat=0;
     P[Position[3]][Position[2]].etat=1;
@@ -55,10 +58,12 @@ void Mr_Propre(int *type, int tab[], S_Case P[][Long], int Position[], int j, in
     tab[*type-1]--;
 }
 
-void Vente_Marchandises(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long], int j, int Position[], int march){
+void Vente_Marchandises(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long], int j, int Position[], int march)
+{
     /**Permet de vendre les marchandises de la frégates**/
     J[j].doublons=J[j].doublons+J[j].M.marchandise*Vente[Type_March[march-4]][J[j].M.type_marchandise%5];
-    if(J[j].Pioche.dev[0]==1){ //Si carte dev 1 débloqué, +2 doublons par marchandises qui manquent
+    if(J[j].Pioche.dev[0]==1)  //Si carte dev 1 débloqué, +2 doublons par marchandises qui manquent
+    {
         J[j].doublons=J[j].doublons+((3-J[j].M.marchandise)*ASSURANCE_PERTE);
     }
     J[j].M.marchandise=3;
@@ -70,9 +75,10 @@ void Vente_Marchandises(int *type, int tab[], int action[], Joueur J[], S_Case P
     J[j].M.coordonee[1]=Position[2];
 }
 
-void Case_Libre(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long], fregate F[], int j, int Position[]){
+void Case_Libre(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long], fregate F[], int j, int Position[])
+{
     /**Action à Effectuer en cas de case libre**/
-    if(Position[2]<0 || Position[2]>Long || Position[3]<0 || Position[3]>Larg)  //Vérification que le plateau n'est pas dépassé
+    if(Position[2]<0 || Position[2]>Long-1 || Position[3]<0 || Position[3]>Larg-1)  //Vérification que le plateau n'est pas dépassé
     {
         Messages(4);
     }
@@ -98,7 +104,8 @@ void Case_Libre(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long]
         }
         else if(*type==2)  //si c'est un pirate
         {
-            if((P[Position[3]][Position[2]].type>=4 || P[Position[3]][Position[2]].type==3) && action[*type-1]!=0){
+            if((P[Position[3]][Position[2]].type>=4 || P[Position[3]][Position[2]].type==3) && action[*type-1]!=0)
+            {
                 Messages(5);
             }
             else if(P[Position[3]][Position[2]].type==3 && J[j].P.marchandise==1 && action[*type-1]!=1)  //Si case Trésor
@@ -112,7 +119,8 @@ void Case_Libre(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long]
                 P[Position[3]][Position[2]].joueur=j;
                 Mr_Propre(type, tab, P, Position,j,action,J);
             }
-            else if(J[j].Pioche.dev[1]==1 && action[*type-1]!=1 && J[j].P.marchandise==1 && P[Position[3]][Position[2]].type>=4){ //Si Port (Bonus Carte Dev)
+            else if(J[j].Pioche.dev[1]==1 && action[*type-1]!=1 && J[j].P.marchandise==1 && P[Position[3]][Position[2]].type>=4)  //Si Port (Bonus Carte Dev)
+            {
                 J[j].doublons=J[j].doublons+BONUS_PIRATES;
                 J[j].P.marchandise=0;
                 action[*type-1]=1;
@@ -122,7 +130,8 @@ void Case_Libre(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long]
                 P[Position[3]][Position[2]].joueur=j;
                 Mr_Propre(type, tab, P, Position,j,action,J);
             }
-            else{
+            else
+            {
                 J[j].P.coordonee[0]=Position[3];
                 J[j].P.coordonee[1]=Position[2];
                 P[Position[3]][Position[2]].bateau=1;
@@ -133,7 +142,8 @@ void Case_Libre(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long]
         else  //si c'est un marchand
         {
             //En cas de Case Port (et selon la case)
-            if(P[Position[3]][Position[2]].type==4 && J[j].M.marchandise!=0 && action[*type-1]!=1){
+            if(P[Position[3]][Position[2]].type==4 && J[j].M.marchandise!=0 && action[*type-1]!=1)
+            {
                 Vente_Marchandises(type,tab,action,J,P,j,Position,4);
             }
             else if(P[Position[3]][Position[2]].type==5 && J[j].M.marchandise!=0 && action[*type-1]!=1)
@@ -171,7 +181,7 @@ void Case_Libre(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long]
 void Case_Prise(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long], fregate F[], int j, int Position[])
 {
     /**Action à Effectuer en cas de case non libre**/
-    if(Position[2]<0 || Position[2]>Long || Position[3]<0 || Position[3]>Larg)  //Vérification que le plateau n'est pas dépassé
+    if(Position[2]<0 || Position[2]>Long-1 || Position[3]<0 || Position[3]>Larg-1)  //Vérification que le plateau n'est pas dépassé
     {
         Messages(4);
     }
@@ -183,7 +193,8 @@ void Case_Prise(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long]
     {
         Messages(3);
     }
-    else if(action[*type-1]==1 && (*type==1 || *type==2)){
+    else if(action[*type-1]==1 && (*type==1 || *type==2))
+    {
         Messages(5);
     }
     else
@@ -221,9 +232,10 @@ void Case_Prise(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long]
                     P[Position[3]][Position[2]].etat=0;
                     J[P[Position[3]][Position[2]].joueur].M.statut=0, J[P[Position[3]][Position[2]].joueur].M.marchandise=0;
                     J[j].P.marchandise=1;
-                    J[j].doublons=J[j].doublons+MARCHAND_COULE;
+                    J[j].doublons=J[j].doublons+MARCHAND_ATTAQUE;
                     action[*type-1]=1;
-                    if(J[P[Position[3]][Position[2]].joueur].Pioche.dev[0]==1){ //Si assurance joueur attaqué
+                    if(J[P[Position[3]][Position[2]].joueur].Pioche.dev[0]==1)  //Si assurance joueur attaqué
+                    {
                         J[P[Position[3]][Position[2]].joueur].doublons=J[P[Position[3]][Position[2]].joueur].doublons+ASSURANCE_COULE;
                     }
                 }
@@ -233,6 +245,7 @@ void Case_Prise(int *type, int tab[], int action[], Joueur J[], S_Case P[][Long]
                     J[P[Position[3]][Position[2]].joueur].M.marchandise--;
                     J[j].P.marchandise++;
                     action[*type-1]=1;
+                    J[j].doublons=J[j].doublons+MARCHAND_ATTAQUE;
                 }
             }
             else if(P[Position[3]][Position[2]].joueur ==j || P[Position[3]][Position[2]].joueur==(tab[3]+1)%2) //Attaque Ami
@@ -268,6 +281,7 @@ void Verification_Case(int *type, int tab[], int action[], Joueur J[], S_Case P[
         color(BLANC,NOIR);
         printf("        Doublons : %d\n\n",J[j].doublons);
         Affichage_Plateau(P,J,F);
+        printf("\n Déplacez vous avec les flèches directionnelles ");
         i=0;
         while(i!=HAUT && i!=BAS && i!=DROITE && i!=GAUCHE && i!=ECHAP)
         {

@@ -25,8 +25,8 @@
 #define ESPACE 13
 
 #define TRESOR 4
-#define TOUCHE_COULE 5
-#define MARCHAND_COULE 2
+#define TOUCHE_COULE 2
+#define MARCHAND_ATTAQUE 2
 #define ASSURANCE_PERTE 2
 #define ASSURANCE_COULE 6
 #define BONUS_PIRATES 5

@@ -70,13 +70,13 @@
 	"Menu.h"
 	"Affichage/Couleurs.h"
 
-1652169279 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.c
+1652255688 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	"../Objets.h"
 
-1652113519 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.c
+1652260267 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -84,14 +84,15 @@
 	"../Objets.h"
 	"Couleurs.h"
 
-1652168802 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
+1652257369 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\declarations_variables.h
 
-1651832541 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.h
+1652255688 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\affichage\couleurs.h
+	"../Objets.h"
 
-1652084412 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\objets.h
+1652255688 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\objets.h
 	"Declarations_Variables.h"
 
-1652168802 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
+1652255688 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -100,10 +101,11 @@
 	"Objets.h"
 	"Fonctions_Initialisation.h"
 	"Affichage/Couleurs.h"
+	"Module_Jeux/Message.h"
 
 1652082822 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\fonctions_initialisation.h
 
-1652168802 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\main.c
+1652256474 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -116,12 +118,13 @@
 	"Module_Jeux/Cartes.h"
 	"Module_Jeux/Déplacements.h"
 	"Module_Jeux/Placements.h"
+	"Module_Jeux/Fin_Partie.h"
 
 1652083869 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\affichage\plateau.h
 
-1651502411 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\menu.h
+1652255688 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\menu.h
 
-1652168802 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\menu.c
+1652255688 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -146,9 +149,9 @@
 
 1652210762 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
 
-1652082822 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
+1652255688 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.h
 
-1652082822 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.c
+1652255688 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\cartes.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -157,6 +160,7 @@
 	<string.h>
 	"../Objets.h"
 	"../Affichage/Couleurs.h"
+	"Message.h"
 
 1652222395 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.c
 	<stdio.h>
@@ -173,7 +177,7 @@
 
 1652082822 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.h
 
-1652168802 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.c
+1652260841 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\déplacements.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -182,6 +186,7 @@
 	"../Affichage/Couleurs.h"
 	"../Declarations_Variables.h"
 	"../Affichage/Plateau.h"
+	"Message.h"
 
 1652221273 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\placements.c
 	<stdio.h>
@@ -198,7 +203,7 @@
 
 1652168802 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\placements.h
 
-1652168802 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\placements.c
+1652258687 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\placements.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -207,7 +212,7 @@
 	"../Objets.h"
 	"../Affichage/Couleurs.h"
 	"../Affichage/Plateau.h"
-	"Déplacements.h"
+	"Message.h"
 
 1652202720 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\fin_partie.h
 
@@ -222,6 +227,25 @@
 1652211721 d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\message.h
 
 1652222062 source:d:\github\black_fleet\black_fleet_odeau_sereno\module_jeux\message.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"../Affichage/Couleurs.h"
+
+1652255688 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\message.h
+
+1652255688 c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\fin_partie.h
+
+1652255688 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\fin_partie.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"../Objets.h"
+	"../Affichage/Couleurs.h"
+
+1652255688 source:c:\users\simon\documents\github\black_fleet\black_fleet_odeau_sereno\module_jeux\message.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>

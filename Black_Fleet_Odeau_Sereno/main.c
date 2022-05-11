@@ -51,7 +51,7 @@ int main()
         system("cls");
         printf("|------------------------------Black Fleet------------------------------|\n");
         printf("                      ODEAU Simon & SERENO Matthieu");
-        Sleep(10000);
+        Sleep(5000);
         break;
     case 4:
         printf("Fermeture...");
