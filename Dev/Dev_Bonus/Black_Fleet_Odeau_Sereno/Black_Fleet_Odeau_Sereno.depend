@@ -429,7 +429,7 @@
 
 1652283654 d:\github\black_fleet\dev\dev_bonus\black_fleet_odeau_sereno\menu.h
 
-1652283654 source:d:\github\black_fleet\dev\dev_bonus\black_fleet_odeau_sereno\module_jeux\cartes.c
+1652356073 source:d:\github\black_fleet\dev\dev_bonus\black_fleet_odeau_sereno\module_jeux\cartes.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -470,14 +470,14 @@
 	"../Affichage/Plateau.h"
 	"Message.h"
 
-1652310095 source:d:\github\black_fleet\dev\dev_bonus\black_fleet_odeau_sereno\module_jeux\message.c
+1652355307 source:d:\github\black_fleet\dev\dev_bonus\black_fleet_odeau_sereno\module_jeux\message.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	<conio.h>
 	"../Affichage/Couleurs.h"
 
-1652314281 source:d:\github\black_fleet\dev\dev_bonus\black_fleet_odeau_sereno\main.c
+1652355301 source:d:\github\black_fleet\dev\dev_bonus\black_fleet_odeau_sereno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -493,6 +493,7 @@
 	"Module_Jeux/Fin_Partie.h"
 	"Module_Jeux/Message.h"
 	"Fichiers.h"
+	"Option.h"
 
 1652283654 d:\github\black_fleet\dev\dev_bonus\black_fleet_odeau_sereno\module_jeux\cartes.h
 
@@ -509,4 +510,14 @@
 	<conio.h>
 
 1652314284 d:\github\black_fleet\dev\dev_bonus\black_fleet_odeau_sereno\fichiers.h
+
+1652355509 source:d:\github\black_fleet\dev\dev_bonus\black_fleet_odeau_sereno\option.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"Declarations_Variables.h"
+	"Module_Jeux/Message.h"
+
+1652354553 d:\github\black_fleet\dev\dev_bonus\black_fleet_odeau_sereno\option.h
 

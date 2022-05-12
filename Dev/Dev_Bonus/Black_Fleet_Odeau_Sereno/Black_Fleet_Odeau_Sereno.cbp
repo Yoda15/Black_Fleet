@@ -73,6 +73,10 @@
 		</Unit>
 		<Unit filename="Module_Jeux/Placements.h" />
 		<Unit filename="Objets.h" />
+		<Unit filename="Option.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Option.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

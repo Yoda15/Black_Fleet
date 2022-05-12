@@ -14,10 +14,12 @@
 #include "Module_Jeux/Fin_Partie.h"
 #include "Module_Jeux/Message.h"
 #include "Fichiers.h"
-
+#include "Option.h"
 
 int main()
 {
+    system("Stop_Musique.bat");
+    system("cls");
     SetConsoleOutputCP(1252); //permet d'afficher les accents
     HWND hwnd=GetForegroundWindow(); //Affichage
     ShowWindow(hwnd,SW_MAXIMIZE);    //En plein écran
@@ -28,28 +30,46 @@ int main()
     S_Case P[Larg][Long]; //Création Plateau
     fregate F[2];
     int val_dep[CARTES+1]; //Valeur de déplacement de chaque bateau case 1:frégate, case 2:Pirate, case3:Marchand, case 4: couleur frégate
-    int a,i;
-    system("Stop_Musique.bat");
+    int a,i,nbj=4,difficulte=1,vitesse=1;
     system("Musique_Menu.bat");
     do{
       a=menu();
     switch (a){
     case 1:
-        system("Stop_Musique.bat");
-        system("Musique_Jeu.bat");
         //Initialiser Types Structurés
+        Option(&nbj,&difficulte,&vitesse);
         Initialisation(J,F);
         initialiser_Plateau(P);
         //Placement Initial Bateau
         for(i=0;i<4;i++){
             Placement_Bateau(&J[i],P,F);
+            if(vitesse==2){
+                J[i].Pioche.dev[2]=1;
+                J[i].Pioche.dev[3]=1;
+            }
+            else if(vitesse==3){
+                J[i].Pioche.dev[0]=1;
+                J[i].Pioche.dev[1]=1;
+                J[i].Pioche.dev[2]=1;
+                J[i].Pioche.dev[3]=1;
+            }
         }
+        system("Stop_Musique.bat");
+        system("Musique_Jeu.bat");
         while(J[0].Pioche.Fin_Partie==0 && J[1].Pioche.Fin_Partie==0 && J[2].Pioche.Fin_Partie==0 && J[3].Pioche.Fin_Partie==0){
             for(i=0; i<4; i++){ //Tour
                 Placement_Bateau(&J[i],P, F);
                 Cartes_Aleatoire(val_dep,J[i]);
                 Deplacements(J,P,F,i,val_dep);
                 Achat_Carte(&J[i]);
+                if(difficulte==2){
+                    Messages(22);
+                    J[i].doublons--;
+                }
+                else if(difficulte==3){
+                    Messages(22);
+                    J[i].doublons=J[i].doublons-3;
+                }
             }
         }
         Fin_de_partie(J);

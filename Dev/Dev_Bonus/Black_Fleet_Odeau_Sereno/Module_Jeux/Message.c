@@ -71,6 +71,15 @@ void Messages(int a){
     case 19:
         printf("Attention au song !!!");
         break;
+    case 20:
+        printf("Utilisez les fléches directionelles...");
+        break;
+    case 21:
+        printf("Valeurs MAX/MIN...");
+        break;
+    case 22:
+        printf("Taxes !");
+        break;
     }
     color(BLANC,NOIR);
     Sleep(2000);

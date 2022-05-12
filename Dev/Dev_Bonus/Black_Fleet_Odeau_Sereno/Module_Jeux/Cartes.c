@@ -131,17 +131,17 @@ void Cartes_Aleatoire(int tab[], Joueur J){
     if(J.Pioche.dev[3]==1){ //Si carte dev 4 débloqué, alors Afficher la nouvelle Carte
         printf("                                            |-----Tirage3-----|\n");
         color(couleur[tab3[3]],0);
-        printf("                                              -Frégate : %d\n", tab1[0]);
+        printf("                                              -Frégate : %d\n", tab3[0]);
         color(15,0);
         printf("                                              - Pirate : %d\n", tab3[1]);
         printf("                                              - Marchand : %d\n\n", tab3[2]);
     }
     printf("Merci de faire votre choix (1/2[+3]): ");
     scanf("%d", &k);
-    if(((J.Pioche.dev[3]==0) && (k!=1 && k!=2)) || ((J.Pioche.dev[3]==1) && (k<1 && k>3))){
+    if(((J.Pioche.dev[3]==0) && (k!=1 && k!=2)) || ((J.Pioche.dev[3]==1) && (k<1 || k>3))){
         Messages(6);
     }
-    }while(((J.Pioche.dev[3]==0) && (k!=1 && k!=2)) || ((J.Pioche.dev[3]==1) && (k<1 && k>3)));
+    }while(((J.Pioche.dev[3]==0) && (k!=1 && k!=2)) || ((J.Pioche.dev[3]==1) && (k<1 || k>3)));
     switch(k){ //Transfert Choix_Tirage->Carte déplacements
     case 1: //si tirage 1 choisi
         Tirage_Choisi(tab,J,tab1);
