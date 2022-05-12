@@ -6,6 +6,17 @@
 #include "Declarations_Variables.h"
 #include "Module_Jeux/Message.h"
 
+/*
+ATTENTION !!! IMPORTANT
+Si vous fermez manuellement la fenêtre (deux options pour arrêter la musique):
+ 1-Ouvrez le fichier Stop_Musique.bat (dans le répertoire général)
+ 2-Lancez puis Fermez directement (avant d'arriver sur le menu général) le programme
+*/
+
+
+
+
+
 void Choix(int *j, int *variable)
 {
     int i;
@@ -65,17 +76,17 @@ void Option(int *nbj,int *difficulte,int *vitesse)
             printf("|--------------------------------------------------------------------------------------------------------|\n");
             if(i==3)
             {
-                printf("|                                      < Nombre de Joueur : %d >                                     |\n", *nbj);
+                printf("|                                          < Nombre de Joueur : %d >                                      |\n", *nbj);
                 Choix(&i,nbj);
             }
             else if(i==2)
             {
-                printf("|                                      < Difficulté : %d >                                           |\n", *difficulte);
+                printf("|                                          < Difficulté : %d >                                            |\n", *difficulte);
                 Choix(&i,difficulte);
             }
             else if(i==1)
             {
-                printf("|                                      < Vitesse de Jeu : %d >                                          |\n", *vitesse);
+                printf("|                                          < Vitesse de Jeu : %d >                                        |\n", *vitesse);
                 Choix(&i,vitesse);
             }
         }while(i!=0);
