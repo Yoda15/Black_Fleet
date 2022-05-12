@@ -36,7 +36,7 @@ void Depart(){
     printf("|--------------------------------------------------------------------------------------------------------|\n");
 }
 
-void Initialisation(Joueur J[], fregate F[]){
+void Initialisation(Joueur J[], fregate F[],int nbj){
     /**Initialisation de l'objet "Joueur"**/
     int c_couleur[8];
     int i,j;
@@ -49,7 +49,7 @@ void Initialisation(Joueur J[], fregate F[]){
     c_couleur[5]=11;
     c_couleur[6]=13;
     c_couleur[7]=15;
-    for(i=0; i<NBJ; i++){ //Boucle permettant de compléter la structure de chaque joueur
+    for(i=0; i<nbj; i++){ //Boucle permettant de compléter la structure de chaque joueur
         system("cls");
         printf("|--------------------------------------------------------------------------------------------------------|\n");
         printf("|                                                                                                        |\n");

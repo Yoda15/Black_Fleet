@@ -1,5 +1,5 @@
 Set Sound = CreateObject("WMPlayer.OCX.7")
-Sound.URL = "pirates-of-the-caribbean-ultimate-cut.mp3"
+Sound.URL = "christopher-tin-sogno-di-volare-the-dream-of-flight-civilization-vi-main-theme.mp3"
 Sound.Controls.play
 do while Sound.currentmedia.duration = 0
 wscript.sleep 100

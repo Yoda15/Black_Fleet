@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <conio.h>
 
+
 #include "Declarations_Variables.h"
 #include "Objets.h"
 #include "Fonctions_Initialisation.h"
@@ -25,6 +26,7 @@ int main()
     ShowWindow(hwnd,SW_MAXIMIZE);    //En plein écran
     Affichage_Fichier_SON();
     Messages(19);
+    Messages(23);
     Sleep(2000);
     Joueur J[NBJ]; //Création Joueur
     S_Case P[Larg][Long]; //Création Plateau
@@ -38,8 +40,23 @@ int main()
     case 1:
         //Initialiser Types Structurés
         Option(&nbj,&difficulte,&vitesse);
-        Initialisation(J,F);
+        Initialisation(J,F,nbj);
         initialiser_Plateau(P);
+        if(nbj<=3){
+            J[3].M.statut=1;
+            J[3].P.statut=1;
+            J[3].Pioche.Fin_Partie=0;
+            if(nbj<=2){
+                J[2].M.statut=1;
+                J[2].P.statut=1;
+                J[2].Pioche.Fin_Partie=0;
+            }
+            if(nbj==1){
+                J[1].M.statut=1;
+                J[1].P.statut=1;
+                J[1].Pioche.Fin_Partie=0;
+            }
+        }
         //Placement Initial Bateau
         for(i=0;i<4;i++){
             Placement_Bateau(&J[i],P,F);
@@ -57,7 +74,7 @@ int main()
         system("Stop_Musique.bat");
         system("Musique_Jeu.bat");
         while(J[0].Pioche.Fin_Partie==0 && J[1].Pioche.Fin_Partie==0 && J[2].Pioche.Fin_Partie==0 && J[3].Pioche.Fin_Partie==0){
-            for(i=0; i<4; i++){ //Tour
+            for(i=0; i<nbj; i++){ //Tour
                 Placement_Bateau(&J[i],P, F);
                 Cartes_Aleatoire(val_dep,J[i]);
                 Deplacements(J,P,F,i,val_dep);

@@ -66,20 +66,23 @@ void Messages(int a){
         printf("\nPlus De Place... !");
         break;
     case 18:
-        printf("Couleur Déjà Selectionné ! Merci d'en choisir une autre.");
+        printf("Couleur Déjà Selectionné ! Merci d'en choisir une autre.\n");
         break;
     case 19:
-        printf("Attention au song !!!");
+        printf("Attention au song !!!\n");
         break;
     case 20:
-        printf("Utilisez les fléches directionelles...");
+        printf("Utilisez les fléches directionelles...\n");
         break;
     case 21:
-        printf("Valeurs MAX/MIN...");
+        printf("Valeurs MAX/MIN...\n");
         break;
     case 22:
-        printf("Taxes !");
+        printf("Taxes !\n");
         break;
+    case 23:
+        printf("Si vous fermez manuellement la fenêtre,\n Arrêtez la musique en ouvrant le fichier Stop_Musique.bat (dans le répertoire général)\n");
+        Sleep(1000);
     }
     color(BLANC,NOIR);
     Sleep(2000);
